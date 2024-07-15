@@ -2,6 +2,7 @@ import { twMerge } from 'tailwind-merge'
 import { MenuChild } from './menu'
 
 const placementClassName = {
+  center: 'c-menu-items-center',
   top: 'c-menu-items-top',
   'top-start': 'c-menu-items-top-start',
   'top-end': 'c-menu-items-top-end',

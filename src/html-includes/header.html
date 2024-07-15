@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Architect</title>
+  <title>GBI</title>
 
   <script>
     window.maplocation = [45.219961, 39.222988]
@@ -13,3 +13,133 @@
 </head>
 
 <body>
+
+  <header class="header-top">
+    <div class="btn btn-sm gap-3 btn-primary px-3 -mx-3">
+      <c-icon class="icon text-2xl" href="img/icons.svg#map-point"></c-icon>
+      <div class="text-sm font-semibold font-alt">Краснодарский край</div>
+    </div>
+    <div class="flex items-center gap-16 max-lg:hidden">
+      <c-menu class="group">
+        <c-menu-button class="btn btn-text font-alt gap-3 hover-underline">
+          <div class="absolute -inset-5"></div>
+          О компании
+          <c-icon class="icon text-xs group-[.active]:-rotate-90" href="img/icons.svg#to-right"></c-icon>
+        </c-menu-button>
+        <c-menu-items class="p-3 w-72" placement="bottom-start">
+          <a href="javascript:;" class="btn btn-primary btn-xs justify-start">
+            <span class="text-default">Новости</span>
+          </a>
+          <a href="javascript:;" class="btn btn-primary btn-xs justify-start">
+            <span class="text-default">История</span>
+          </a>
+          <a href="javascript:;" class="btn btn-primary btn-xs justify-start">
+            <span class="text-default">Доставка в ЛНР/ДНР</span>
+          </a>
+          <a href="javascript:;" class="btn btn-primary btn-xs justify-start">
+            <span class="text-default">Цены на ЖБИ</span>
+          </a>
+          <a href="javascript:;" class="btn btn-primary btn-xs justify-start">
+            <span class="text-default">Благодарственные письма</span>
+          </a>
+          <a href="javascript:;" class="btn btn-primary btn-xs justify-start">
+            <span class="text-default">Вакансии</span>
+          </a>
+
+        </c-menu-items>
+      </c-menu>
+
+      <a href="javascript:;" class="btn btn-text hover-underline relative">
+        <div class="absolute -inset-5"></div>
+        <span class="font-alt">Объекты</span>
+      </a>
+      <a href="javascript:;" class="btn btn-text hover-underline relative">
+        <div class="absolute -inset-5"></div>
+        <span class="font-alt">Контакты</span>
+      </a>
+      <a href="javascript:;" class="btn btn-text hover-underline relative">
+        <div class="absolute -inset-5"></div>
+        <span class="font-alt">Доставка</span>
+      </a>
+
+      <button class="btn btn-sm btn-primary px-3">
+        <span class="uppercase font-alt font-semibold">Оставить заявку</span>
+      </button>
+    </div>
+    <div class="btn btn-sm gap-3 btn-green px-3 -mx-3">
+      <c-icon class="icon text-2xl" href="img/icons.svg#user"></c-icon>
+      <div class="text-sm font-semibold font-alt">Личный кабинет</div>
+    </div>
+  </header>
+
+  <header class="header">
+    <div class="flex gap-4 items-center">
+      <button class="btn btn-primary btn-icon btn-sm lg:hidden">
+        <c-icon class="icon text-3xl text-default" href="img/icons.svg#menu"></c-icon>
+      </button>
+      <a href="javascript:;" class="flex items-center gap-3">
+        <img src="/img/logo.svg" alt="" class="shrink-0 max-sm:w-14">
+        <div class="font-alt">
+          <div class="text-sm sm:text-xl font-bold uppercase">БЛОК ЖБИ Россия</div>
+          <div class="text-2xs sm:text-xs opacity-70">Производство железобетонных изделий</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="flex gap-4">
+      <a href="javascript:;" class="btn btn-primary btn-fill gap-2 max-lg:hidden">
+        <c-icon class="icon text-xl" href="img/icons.svg#menu"></c-icon>
+        <div class="font-alt font-semibold">Каталог ЖБИ</div>
+      </a>
+      <div class="relative w-full lg:w-96">
+        <input type="text" class="input w-full " placeholder="Найти...">
+
+        <div class="absolute right-1 top-1/2 -translate-y-1/2">
+          <button class="btn btn-primary btn-icon btn-sm">
+            <c-icon class="icon text-2xl text-default" href="img/icons.svg#search"></c-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-start max-lg:hidden">
+      <a href="javascript:;" class="btn btn-text btn-primary hover-underline">
+        <div class="text-2xl font-bold font-alt">8 918 000 00 00</div>
+      </a>
+      <a href="javascript:;" class="btn btn-text hover-underline">
+        <div class="font-alt">south@block-gbi.ru</div>
+      </a>
+    </div>
+  </header>
+
+  <section class="nav overflow-hidden">
+    <div class="relative sm:overflow-hidden">
+      <div class="nav-slider swiper -mx-2 max-sm:overflow-visible">
+        <div class="swiper-wrapper">
+          <% for(let i = 0; i < 12; i++) { %>
+          <div class="swiper-slide px-2 w-max">
+            <a href="javascript:;" class="nav-item btn btn-sm btn-primary btn-light bg-default/5 border border-default/10">
+              <span class="font-alt text-default max-sm:text-sm">Нефтегазовое строительство</span>
+            </a>
+          </div>
+          <% } %>
+        </div>
+      </div>
+      <div class="nav-slider-shadow z-[2] max-sm:hidden"></div>
+      <div class="absolute right-0 top-1/2 -translate-y-1/2 z-[2] max-sm:hidden">
+        <button class="btn btn-sm btn-icon rounded-full btn-primary btn-light bg-default/10 nav-next">
+          <c-icon class="icon" href="img/icons.svg#to-right"></c-icon>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    new Swiper('.nav-slider', {
+      slidesPerView: 'auto',
+      // touchStartPreventDefault: false,
+      navigation: {
+        nextEl: '.nav-next'
+      }
+    })
+  </script>

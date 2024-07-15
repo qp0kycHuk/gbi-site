@@ -1,5 +1,232 @@
 <%= require('./html-includes/header.html')() %>
 
-<div class="doc"></div>
+<section class="p-0">
+  <div class="started-slider swiper relative">
+    <div class="swiper-wrapper">
+      <% for(let i = 0; i < 5; i++) { %>
+      <div class="swiper-slide">
+        <div class="section started">
+          <div class="absolute-fit started-image">
+            <img src="/img/test.gif" alt="" class="absolute-fit object-cover">
+            <!-- <video src="/img/test.webm" autoplay muted loop class="absolute-fit object-cover"></video> -->
+          </div>
+          <div class="absolute-fit started-shadow"></div>
+          <img src="/img/started-texture.png" alt="" class="absolute-fit object-cover">
+          <div class="started-content">
+            <div class="started-date">Основано в 201<%= i %> году</div>
+            <div class="started-title">
+              гк блок - Компания <br>
+              с 17-летней историей
+            </div>
+            <div class="started-description">
+              ЖБИ - композиционный высокопрочный материал, состоящий <br>
+              из бетона и стали, который широко применяется в строительстве
+            </div>
+            <button class="started-btn  btn btn-primary btn-whitebg">
+              <span class="font-alt font-semibold text-black">Подробнее</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="section started">
+          <div class="absolute-fit started-image">
+            <img src="/img/test.jpg" alt="" class="absolute-fit object-cover">
+            <!-- <video src="/img/test.webm" autoplay muted loop class="absolute-fit object-cover"></video> -->
+          </div>
+          <div class="absolute-fit started-shadow"></div>
+          <img src="/img/started-texture.png" alt="" class="absolute-fit object-cover">
+          <div class="started-content">
+            <div class="started-date">Основано в 201<%= i %> году</div>
+            <div class="started-title">
+              гк блок - Компания <br>
+              с 17-летней историей
+            </div>
+            <div class="started-description">
+              ЖБИ - композиционный высокопрочный материал, состоящий <br>
+              из бетона и стали, который широко применяется в строительстве
+            </div>
+            <button class="started-btn  btn btn-primary btn-whitebg">
+              <span class="font-alt font-semibold text-black">Подробнее</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+
+    <div class="started-pagination-wrapper section">
+      <div class="relative overflow-hidden pl-18">
+        <div class="started-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  new Swiper('.started-slider', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: '.started-pagination',
+      dynamicBullets: true,
+      clickable: true
+    }
+    // effect: 'fade'
+  })
+</script>
+
+<!-- Работаем с 2006  -->
+<section class="working">
+  <div class="title mb-6 sm:mb-10">Работаем с 2006 </div>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-7">
+    <div class="working-item">
+      <div class="working-item-image">
+        <c-icon class="icon" href="img/icons.svg#cert"></c-icon>
+      </div>
+      <div class="working-item-content">
+        <div class="font-alt font-semibold sm:text-1.5xl">
+          Большой
+          практический опыт
+        </div>
+        <div class="text-xs sm:text-sm mt-1 md:mt-3 opacity-60">
+          Компания более 17 лет
+          успешно работаем
+          на строительном рынке
+        </div>
+      </div>
+    </div>
+    <div class="working-item">
+      <div class="working-item-image">
+        <c-icon class="icon" href="img/icons.svg#map-routing"></c-icon>
+      </div>
+      <div class="working-item-content">
+        <div class="font-alt font-semibold sm:text-1.5xl">
+          Развитая филиальная сеть
+        </div>
+        <div class="text-xs sm:text-sm mt-1 md:mt-3 opacity-60">
+          Поставки ЖБИ по всей России
+          (включая ДНР и ЛНР)
+          в самые короткие сроки
+        </div>
+      </div>
+    </div>
+    <div class="working-item">
+      <div class="working-item-image">
+        <c-icon class="icon" href="img/icons.svg#star"></c-icon>
+      </div>
+      <div class="working-item-content">
+        <div class="font-alt font-semibold sm:text-1.5xl">
+          Положительные
+          отзывы
+        </div>
+        <div class="text-xs sm:text-sm mt-1 md:mt-3 opacity-60">
+          Репутация надежного
+          поставщика подтвержденная
+          нашими партнерами
+        </div>
+      </div>
+    </div>
+    <div class="working-item">
+      <div class="working-item-image">
+        <c-icon class="icon" href="img/icons.svg#settings"></c-icon>
+      </div>
+      <div class="working-item-content">
+        <div class="font-alt font-semibold sm:text-1.5xl">
+          Собственные производства
+        </div>
+        <div class="text-xs sm:text-sm mt-1 md:mt-3 opacity-60">
+          Производственные
+          комплексы с Ж/Д путями
+          в собственности
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Нашу продукцию используют  -->
+<section class="category">
+  <div class="title mb-6 sm:mb-10">Нашу продукцию используют </div>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-7">
+    <% for(let i = 0; i < 9; i++) { %>
+    <div class="category-item">
+      <div class="category-item-image">
+        <img src="/img/test.gif" alt="" class="absolute-fit object-cover">
+      </div>
+      <div class="category-item-content">
+        <div class="text-lg sm:text-xl font-alt font-bold mb-3">Энергетическое строительство</div>
+        <div class="flex flex-col gap-2 items-start">
+          <% for(let ii = 0; ii < 3; ii++) { %>
+          <a href="javascript:;" class="flex items-center gap-2 hover-underline">
+            <c-icon class="icon text-green" href="img/icons.svg#gal-ochka"></c-icon>
+            <div class="text-sm">Фундаменты опор</div>
+          </a>
+          <% } %>
+          <a href="javascript:;" class="flex items-center gap-2 hover-underline max-sm:hidden">
+            <c-icon class="icon text-green" href="img/icons.svg#gal-ochka"></c-icon>
+            <div class="text-sm">Фундаменты опор</div>
+          </a>
+        </div>
+
+        <c-menu class="mt-4">
+          <c-menu-button class="btn btn-text btn-primary gap-2.5 ">
+            <c-icon class="icon opacity-60" href="img/icons.svg#circle-plus"></c-icon>
+            <div class="text-sm font-semibold font-alt">
+              Еще <span class="sm:hidden">13</span><span class="max-sm:hidden">12</span> позиций
+            </div>
+          </c-menu-button>
+          <c-menu-items class="p-3 max-md:py-6 w-72 flex flex-col gap-2 items-start" placement="center">
+            <a href="javascript:;" class="flex items-center gap-2 hover-underline max-sm:hidden">
+              <c-icon class="icon text-green" href="img/icons.svg#gal-ochka"></c-icon>
+              <div class="text-sm">Фундаменты опор</div>
+            </a>
+            <% for(let ii = 0; ii < 12; ii++) { %>
+            <a href="javascript:;" class="flex items-center gap-2 hover-underline">
+              <c-icon class="icon text-green" href="img/icons.svg#gal-ochka"></c-icon>
+              <div class="text-sm">Фундаменты опор</div>
+            </a>
+            <% } %>
+          </c-menu-items>
+        </c-menu>
+
+        <div class="mt-auto"></div>
+        <a href="javascript:;" class="btn btn-primary btn-fill gap-2 max-sm:w-full mt-6">
+          <c-icon class="icon text-xl" href="img/icons.svg#menu"></c-icon>
+          <span class="font-alt font-semibold">Смотреть все позиции</span>
+        </a>
+
+      </div>
+    </div>
+    <% } %>
+  </div>
+</section>
+
+<section class="location">
+  <div class="title mb-9">Где мы находимся</div>
+  <div class="text-sm">
+    Группа компаний «Блок» – сеть филиалов по городам России. <br>
+    Вы можете выбрать с каким представительством вам удобнее работать
+  </div>
+  <div class="grid grid-cols-3 gap-x-10 gap-y-2 mt-8 w-max max-w-full">
+    <% for(let i = 0; i < 12; i++) { %>
+    <div class="flex items-center gap-2 hover-underline">
+      <c-icon class="icon text-green" href="img/icons.svg#gal-ochka"></c-icon>
+      <div class="text-sm">г. Санкт-Петербург</div>
+    </div>
+    <% } %>
+  </div>
+  <div class="mt-14">
+    <div class="font-semibold">Если Вашего населенного пункта нет в списке, позвоните по телефону:</div>
+    <div class="flex mt-1">
+      <a href="javascript:;" class="hover:underline underline-offset-4 font-alt font-bold text-3.5xl ">
+        8 (861) 279-36-00
+      </a>
+    </div>
+    <div class="mt-1">
+      и мы оперативно свяжемся с вами и проконсультируем по любому вопросу
+    </div>
+  </div>
+</section>
 
 <%= require('./html-includes/footer.html')() %>
