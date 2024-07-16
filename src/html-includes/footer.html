@@ -1,3 +1,54 @@
+<footer class="footer">
+  <div class="grid lg:grid-cols-4 gap-12">
+    <div class="">
+      <img src="/img/logo.svg" alt="" class="mb-6 lg:mb-8 w-32">
+      <div class="text-2xl font-alt font-bold mb-2">БЛОК ЖБИ Россия</div>
+      <div class="text-sm font-alt opacity-70">
+        Производство ЖБИ с 2016 года <br>
+        Поставки ЖБИ по всей России
+      </div>
+      <div class="font-alt font-bold mt-4 lg:mt-8">Основано в 2006 году</div>
+      <div class="mt-4 lg:mt-12">
+        <div class="text-sm font-alt">Политика конфиденциальности</div>
+        <div class="text-xs font-alt opacity-60">2006-2024 © Все права защищены</div>
+      </div>
+
+      <c-menu class="md:hidden">
+        <c-menu-button class="btn btn-primary btn-whitebg w-full mt-7 text-black">
+          <span class="font-alt font-semibold">Смотреть филиалы</span>
+          <c-icon class="icon text-lg ml-auto" href="img/icons.svg#to-right"></c-icon>
+        </c-menu-button>
+        <c-menu-items class="py-6 px-3 flex flex-col gap-3">
+          <% for(let i = 0; i < 12; i++) { %>
+          <div class="">
+            <div class="text-xl font-alt font-bold text-primary mb-1">г. Санкт-Петербург</div>
+            <div class="text-sm opacity-80">
+              Лиговский пр., д. 50, кор. 11. <br>
+              Тел: <a href="javascript:;" class="hover:underline">8(812) 309-22-09</a> <br>
+              Email: <a href="javascript:;" class="hover:underline">info@block-gbi.ru</a>
+            </div>
+          </div>
+          <% } %>
+        </c-menu-items>
+      </c-menu>
+    </div>
+    <div class="lg:col-span-3 max-md:hidden">
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-12">
+        <% for(let i = 0; i < 12; i++) { %>
+        <div class="">
+          <div class="text-xl font-alt font-bold text-[#7ED8FF] mb-3">г. Санкт-Петербург</div>
+          <div class="text-sm opacity-80">
+            Лиговский пр., д. 50, кор. 11. <br>
+            Тел: <a href="javascript:;" class="hover:underline">8(812) 309-22-09</a> <br>
+            Email: <a href="javascript:;" class="hover:underline">info@block-gbi.ru</a>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 
 </html>

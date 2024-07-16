@@ -20,47 +20,8 @@
       <div class="text-sm font-semibold font-alt">Краснодарский край</div>
     </div>
     <div class="flex items-center gap-16 max-lg:hidden">
-      <c-menu class="group">
-        <c-menu-button class="btn btn-text font-alt gap-3 hover-underline">
-          <div class="absolute -inset-5"></div>
-          О компании
-          <c-icon class="icon text-xs group-[.active]:-rotate-90" href="img/icons.svg#to-right"></c-icon>
-        </c-menu-button>
-        <c-menu-items class="p-3 w-72" placement="bottom-start">
-          <a href="javascript:;" class="btn btn-primary btn-xs justify-start">
-            <span class="text-default">Новости</span>
-          </a>
-          <a href="javascript:;" class="btn btn-primary btn-xs justify-start">
-            <span class="text-default">История</span>
-          </a>
-          <a href="javascript:;" class="btn btn-primary btn-xs justify-start">
-            <span class="text-default">Доставка в ЛНР/ДНР</span>
-          </a>
-          <a href="javascript:;" class="btn btn-primary btn-xs justify-start">
-            <span class="text-default">Цены на ЖБИ</span>
-          </a>
-          <a href="javascript:;" class="btn btn-primary btn-xs justify-start">
-            <span class="text-default">Благодарственные письма</span>
-          </a>
-          <a href="javascript:;" class="btn btn-primary btn-xs justify-start">
-            <span class="text-default">Вакансии</span>
-          </a>
+      <%= require('./nav-items.html')() %>
 
-        </c-menu-items>
-      </c-menu>
-
-      <a href="javascript:;" class="btn btn-text hover-underline relative">
-        <div class="absolute -inset-5"></div>
-        <span class="font-alt">Объекты</span>
-      </a>
-      <a href="javascript:;" class="btn btn-text hover-underline relative">
-        <div class="absolute -inset-5"></div>
-        <span class="font-alt">Контакты</span>
-      </a>
-      <a href="javascript:;" class="btn btn-text hover-underline relative">
-        <div class="absolute -inset-5"></div>
-        <span class="font-alt">Доставка</span>
-      </a>
 
       <button class="btn btn-sm btn-primary px-3">
         <span class="uppercase font-alt font-semibold">Оставить заявку</span>
@@ -74,16 +35,10 @@
 
   <header class="header">
     <div class="flex gap-4 items-center">
-      <button class="btn btn-primary btn-icon btn-sm lg:hidden">
+      <button class="btn btn-primary btn-icon btn-sm  lg:hidden" data-toggle-link="menu">
         <c-icon class="icon text-3xl text-default" href="img/icons.svg#menu"></c-icon>
       </button>
-      <a href="javascript:;" class="flex items-center gap-3">
-        <img src="/img/logo.svg" alt="" class="shrink-0 max-sm:w-14">
-        <div class="font-alt">
-          <div class="text-sm sm:text-xl font-bold uppercase">БЛОК ЖБИ Россия</div>
-          <div class="text-2xs sm:text-xs opacity-70">Производство железобетонных изделий</div>
-        </div>
-      </a>
+      <%= require('./header-logo.html')() %>
     </div>
 
     <div class="flex gap-4">
@@ -111,6 +66,40 @@
       </a>
     </div>
   </header>
+
+  <div class="menu" id="menu">
+    <div class="header">
+      <div class="flex gap-4 items-center">
+        <button class="btn btn-primary btn-icon btn-sm" data-toggle-link="menu">
+          <c-icon class="icon text-3xl text-default" href="img/icons.svg#circle-cross"></c-icon>
+        </button>
+        <%= require('./header-logo.html')() %>
+      </div>
+    </div>
+    <div class="mt-6">
+      <a href="javascript:;" class="btn btn-primary btn-fill gap-2 ">
+        <c-icon class="icon text-xl" href="img/icons.svg#menu"></c-icon>
+        <div class="font-alt font-semibold">Каталог ЖБИ</div>
+      </a>
+    </div>
+    <div class="mt-10 flex flex-col gap-10 items-start">
+      <%= require('./nav-items.html')() %>
+
+      <button class="btn btn-sm btn-primary px-4 self-stretch -mx-4 justify-start rounded-none">
+        <span class="uppercase font-alt font-semibold">Оставить заявку</span>
+      </button>
+    </div>
+
+    <div class="flex flex-col items-start mt-auto">
+      <a href="javascript:;" class="btn btn-text btn-primary hover-underline">
+        <div class="text-2xl font-bold font-alt">8 918 000 00 00</div>
+      </a>
+      <a href="javascript:;" class="btn btn-text hover-underline">
+        <div class="font-alt">south@block-gbi.ru</div>
+      </a>
+    </div>
+  </div>
+  <div class="menu-shadow"></div>
 
   <section class="nav overflow-hidden">
     <div class="relative sm:overflow-hidden">

@@ -202,30 +202,131 @@
   </div>
 </section>
 
+<!-- Где мы находимся -->
 <section class="location">
-  <div class="title mb-9">Где мы находимся</div>
-  <div class="text-sm">
-    Группа компаний «Блок» – сеть филиалов по городам России. <br>
-    Вы можете выбрать с каким представительством вам удобнее работать
+  <div class="location-image">
+    <picture>
+      <source media="(min-width: 769.98px)" srcset="/img/location-map.svg">
+      <img src="img/location-map-sm.svg" alt="">
+    </picture>
   </div>
-  <div class="grid grid-cols-3 gap-x-10 gap-y-2 mt-8 w-max max-w-full">
-    <% for(let i = 0; i < 12; i++) { %>
-    <div class="flex items-center gap-2 hover-underline">
-      <c-icon class="icon text-green" href="img/icons.svg#gal-ochka"></c-icon>
-      <div class="text-sm">г. Санкт-Петербург</div>
+  <img src="img/location-texture.png" alt="" class="absolute-fit">
+  <div class="location-content">
+    <div class="title mb-5 md:mb-8">Где мы находимся</div>
+    <div class="text-sm">
+      Группа компаний «Блок» – сеть филиалов по городам России. <br>
+      Вы можете выбрать с каким представительством вам удобнее работать
     </div>
-    <% } %>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-x-10 sm:gap-y-4 mt-8 sm:w-max max-w-full">
+      <% for(let i = 0; i < 12; i++) { %>
+      <div class="flex items-center gap-2">
+        <c-icon class="icon text-green" href="img/icons.svg#gal-ochka"></c-icon>
+        <div class="text-sm">г. Санкт-Петербург</div>
+      </div>
+      <% } %>
+    </div>
+    <div class="mt-6 sm:mt-14">
+      <div class="font-semibold max-sm:text-sm">Если Вашего населенного пункта нет в списке, позвоните по телефону:</div>
+      <div class="flex mt-1">
+        <a href="javascript:;" class="hover:underline underline-offset-4 font-alt font-bold text-2xl sm:text-3.5xl ">
+          8 (861) 279-36-00
+        </a>
+      </div>
+      <div class="mt-1 max-sm:text-sm">
+        и мы оперативно свяжемся с вами и проконсультируем по любому вопросу
+      </div>
+    </div>
   </div>
-  <div class="mt-14">
-    <div class="font-semibold">Если Вашего населенного пункта нет в списке, позвоните по телефону:</div>
-    <div class="flex mt-1">
-      <a href="javascript:;" class="hover:underline underline-offset-4 font-alt font-bold text-3.5xl ">
-        8 (861) 279-36-00
-      </a>
+</section>
+
+<!-- О компании -->
+<section class="about">
+  <div class="about-image ratio ratio-[42/43]">
+    <img src="/img/about-image.jpg" alt="" class="absolute-fit">
+  </div>
+
+  <div class="about-content">
+    <div class="title mb-6">О компании</div>
+    <div class=" opacity-70 text-sm">
+      Группа компаний «БЛОК» — одна из крупнейших инжиниринговых компаний, занимающихся изготовлением и поставкой железобетонных изделий (ЖБИ) для строительства по всей территории России.
+      <br><br>
+      Благодаря наличию собственных производственных и складских баз железобетонных изделий, а также развитой инфраструктуре по всей России, наша компания готова предложить Вам широкий ассортимент жби по привлекательным ценам с поставкой в кратчайшие сроки.
     </div>
-    <div class="mt-1">
-      и мы оперативно свяжемся с вами и проконсультируем по любому вопросу
+    <div class="flex mt-6 sm:mt-14">
+      <a href="javascript:;" class="btn btn-primary btn-fill">Подробнее о компании</a>
     </div>
+  </div>
+
+  <div class="about-aside divide-y divide-default/5">
+    <div class="flex items-center gap-4 py-4">
+      <div class="size-10 flex about-aside-image">
+        <c-icon class="icon m-auto text-2xl text-primary" href="img/icons.svg#wallet"></c-icon>
+      </div>
+      <div class="font-alt font-medium">
+        Привлекательные цены
+        на весь ассортимент
+      </div>
+    </div>
+    <div class="flex items-center gap-4 py-4">
+      <div class="size-10 flex about-aside-image">
+        <c-icon class="icon m-auto text-2xl text-primary" href="img/icons.svg#timer"></c-icon>
+      </div>
+      <div class="font-alt font-medium">
+        Поставка
+        в кратчайшие сроки
+      </div>
+    </div>
+    <div class="flex items-center gap-4 py-4">
+      <div class="size-10 flex about-aside-image">
+        <c-icon class="icon m-auto text-2xl text-primary" href="img/icons.svg#settings-alt"></c-icon>
+      </div>
+      <div class="font-alt font-medium">
+        Полный комплекс
+        по монтажу жби
+      </div>
+    </div>
+    <div class="flex items-center gap-4 py-4">
+      <div class="size-10 flex about-aside-image">
+        <c-icon class="icon m-auto text-2xl text-primary" href="img/icons.svg#grid"></c-icon>
+      </div>
+      <div class="font-alt font-medium">
+        Более тысячи
+        наименований жби
+      </div>
+    </div>
+    <div class="flex items-center gap-4 py-4">
+      <div class="size-10 flex about-aside-image">
+        <c-icon class="icon m-auto text-2xl text-primary" href="img/icons.svg#stak"></c-icon>
+      </div>
+      <div class="font-alt font-medium">
+        Изготовление ЖБИ
+        по чертежам заказчика
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Нужна консультация? -->
+<section class="consultation">
+  <div class="consultation-content">
+    <div class="title mb-5 sm:mb-8">Нужна консультация?</div>
+    <div class="flex flex-col gap-1 sm:gap-2 sm:items-start">
+      <div class="flex items-center gap-2 bg-l3 rounded-xl p-3">
+        <c-icon class="icon text-green" href="img/icons.svg#gal-ochka"></c-icon>
+        <div class="text-sm">Оперативно перезвоним вам</div>
+      </div>
+      <div class="flex items-center gap-2 bg-l3 rounded-xl p-3">
+        <c-icon class="icon text-green" href="img/icons.svg#gal-ochka"></c-icon>
+        <div class="text-sm">Расскажем о железобетонных изделиях, ГОСТах, ТУ, сериях</div>
+      </div>
+      <div class="flex items-center gap-2 bg-l3 rounded-xl p-3">
+        <c-icon class="icon text-green" href="img/icons.svg#gal-ochka"></c-icon>
+        <div class="text-sm">Подготовим для вас индивидуальное предложение</div>
+      </div>
+    </div>
+    <button class="btn btn-primary btn-fill mt-6 sm:mt-12">
+      Оставить заявку
+    </button>
   </div>
 </section>
 

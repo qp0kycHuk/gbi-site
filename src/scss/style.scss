@@ -454,8 +454,162 @@ body {
 }
 
 .location {
-  padding-top   : 64px;
+  padding-top   : 58px;
   padding-bottom: 80px;
   background    : theme('colors.primary');
   color         : #fff;
+  overflow      : hidden;
+  position      : relative;
+
+  @media (max-width: theme('screens.sm')) {
+    padding-top   : 32px;
+    padding-bottom: 40px;
+  }
+
+  &-image {
+    position: absolute;
+    top     : 0;
+    width   : 1600px;
+    left    : calc(50% - 672px);
+
+    @media (max-width: theme('screens.md')) {
+      width : 100%;
+      left  : 0;
+      bottom: 24px;
+      top   : auto;
+    }
+
+    img {
+      @media (max-width: theme('screens.md')) {
+        width: 100%;
+      }
+    }
+  }
+
+  &-content {
+    position: relative;
+  }
+}
+
+.about {
+  display       : flex;
+  align-items   : center;
+  gap           : 54px;
+  padding-top   : 80px;
+  padding-bottom: 80px;
+
+  @media (max-width: theme('screens.lg')) {
+    flex-wrap: wrap;
+    gap      : 24px;
+  }
+
+  @media (max-width: theme('screens.md')) {
+    padding-top   : 16px;
+    padding-bottom: 32px;
+  }
+
+  &-image {
+    width        : 420px;
+    max-width    : 100%;
+    flex-shrink  : 0;
+    border-radius: 20px;
+    overflow     : hidden;
+  }
+
+  &-content {
+    @media (max-width: theme('screens.lg')) and (min-width: theme('screens.md')) {
+      order: 10;
+    }
+
+  }
+
+  &-aside {
+    border       : 0.5px solid rgba(0, 0, 0, 0.039);
+    box-shadow   : 0 3px 1px 0 rgba(0, 0, 0, 0.039), 0 3px 8px 0 rgba(0, 0, 0, 0.059);
+    width        : 285px;
+    flex-shrink  : 0;
+    border-radius: 20px;
+    padding      : 24px;
+
+    @media (max-width: theme('screens.md')) {
+      width: 100%;
+    }
+
+    &-image {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%), theme('colors.primary / 15%');
+      border-radius: 10px;
+      flex-shrink  : 0;
+
+    }
+  }
+}
+
+.consultation {
+  background    : url("../img/consultation-bg.jpg") no-repeat center / cover, theme('colors.default / 2%');
+  padding-top   : 80px;
+  padding-bottom: 80px;
+
+  @media (max-width: theme('screens.sm')) {
+    background    : url("../img/consultation-bg-sm.jpg") no-repeat center / cover, theme('colors.default / 2%');
+    padding-top   : 32px;
+    padding-bottom: 272px;
+  }
+}
+
+.footer {
+  padding-top   : 50px;
+  padding-bottom: 76px;
+  background    : url("../img/footer-texture.png") no-repeat center / cover,
+    linear-gradient(275.58deg, rgba(32, 78, 157, 0) 50.4%, rgba(32, 78, 157, 0.8) 100%), #12284D;
+  color: #fff;
+
+  @media (max-width: theme('screens.md')) {
+    background:
+      linear-gradient(275.58deg, rgba(32, 78, 157, 0) 50.4%, rgba(32, 78, 157, 0.8) 100%), #12284D;
+    padding-bottom: 32px;
+    padding-top   : 32px;
+  }
+
+  &-addresses {
+    display              : grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap                  : 48px;
+
+
+  }
+}
+
+.menu {
+  position      : fixed;
+  left          : 0;
+  top           : 0;
+  height        : 100%;
+  width         : 425px;
+  max-width     : 100%;
+  z-index       : theme('zIndex.3');
+  background    : theme('colors.l3');
+  padding-left  : 16px;
+  padding-right : 16px;
+  display       : flex;
+  flex-direction: column;
+  padding-bottom: 64px;
+  transition    : .25s ease;
+
+  &:not(.toggle-active) {
+    transform: translateX(-100%);
+  }
+
+  &-shadow {
+    position  : fixed;
+    inset     : 0;
+    z-index   : calc(theme('zIndex.3') - 1);
+    background: rgba(0, 0, 0, 0.5);
+    transition: .25s ease;
+  }
+
+  &:not(.toggle-active)+&-shadow {
+    opacity       : 0;
+    pointer-events: none;
+  }
 }
