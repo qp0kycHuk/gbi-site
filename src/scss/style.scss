@@ -131,6 +131,7 @@ body {
     font-size  : 48px;
     font-weight: 700;
     font-family: theme('fontFamily.alt');
+    line-height: calc(33 / 28);
 
     @media (max-width: theme('screens.md')) {
       font-size: 32px;
@@ -663,4 +664,27 @@ body {
   box-shadow : 0 10px 16px 0 rgba(0, 0, 0, 0.04);
   padding    : 16px;
   gap        : 42px;
+
+  @media (max-width: theme('screens.lg')) {
+    flex-direction: column;
+    align-items   : flex-start;
+    gap           : 24px;
+  }
+
+  &-image {
+    flex-shrink  : 0;
+    width        : 296px;
+    border-radius: 20px;
+    overflow     : hidden;
+
+    @media (max-width: theme('screens.sm')) {
+      width: 220px;
+    }
+  }
+
+  &-content {
+    display       : flex;
+    flex-direction: column;
+    align-items   : flex-start;
+  }
 }
