@@ -1,13 +1,8 @@
 <%= require('./html-includes/header.html')() %>
+<%= require('./html-includes/breadcrumps.html')() %>
 
-<section class="p-section">
-  <div class="flex items-center gap-3 text-sm text-default/60 mb-8">
-    <a href="javascript:;" class="hover-underline">Главная</a>
-    <c-icon class="icon" href="img/icons.svg#to-right"></c-icon>
-    <a href="javascript:;" class="hover-underline">Каталог ЖБИ</a>
-  </div>
+<section>
   <div class="title mb-6 sm:mb-10">Каталог ЖБИ</div>
-
 
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-7">
     <% for(let i = 0; i < 9; i++) { %>

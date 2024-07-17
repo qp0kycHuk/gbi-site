@@ -656,3 +656,11 @@ body {
     }
   }
 }
+
+.subcat-item {
+  display    : flex;
+  align-items: center;
+  box-shadow : 0 10px 16px 0 rgba(0, 0, 0, 0.04);
+  padding    : 16px;
+  gap        : 42px;
+}

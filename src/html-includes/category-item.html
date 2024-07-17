@@ -1,0 +1,48 @@
+<div class="category-item">
+  <div class="category-item-image">
+    <img src="/img/test.gif" alt="" class="absolute-fit object-cover">
+  </div>
+  <div class="category-item-content">
+    <div class="text-lg sm:text-xl font-alt font-bold mb-3">Энергетическое строительство</div>
+    <div class="flex flex-col gap-2 items-start">
+      <% for(let ii = 0; ii < 3; ii++) { %>
+      <a href="javascript:;" class="flex items-center gap-2 hover-underline">
+        <c-icon class="icon text-green" href="img/icons.svg#gal-ochka"></c-icon>
+        <div class="text-sm">Фундаменты опор</div>
+      </a>
+      <% } %>
+      <a href="javascript:;" class="flex items-center gap-2 hover-underline max-sm:hidden">
+        <c-icon class="icon text-green" href="img/icons.svg#gal-ochka"></c-icon>
+        <div class="text-sm">Фундаменты опор</div>
+      </a>
+    </div>
+
+    <c-menu class="mt-4">
+      <c-menu-button class="btn btn-text btn-primary gap-2.5 ">
+        <c-icon class="icon opacity-60" href="img/icons.svg#circle-plus"></c-icon>
+        <div class="text-sm font-semibold font-alt">
+          Еще <span class="sm:hidden">13</span><span class="max-sm:hidden">12</span> позиций
+        </div>
+      </c-menu-button>
+      <c-menu-items class="p-3 max-md:py-6 w-72 flex flex-col gap-2 items-start" placement="center">
+        <a href="javascript:;" class="flex items-center gap-2 hover-underline max-sm:hidden">
+          <c-icon class="icon text-green" href="img/icons.svg#gal-ochka"></c-icon>
+          <div class="text-sm">Фундаменты опор</div>
+        </a>
+        <% for(let ii = 0; ii < 12; ii++) { %>
+        <a href="javascript:;" class="flex items-center gap-2 hover-underline">
+          <c-icon class="icon text-green" href="img/icons.svg#gal-ochka"></c-icon>
+          <div class="text-sm">Фундаменты опор</div>
+        </a>
+        <% } %>
+      </c-menu-items>
+    </c-menu>
+
+    <div class="mt-auto"></div>
+    <a href="javascript:;" class="btn btn-primary btn-fill gap-2 max-sm:w-full mt-6">
+      <c-icon class="icon text-xl" href="img/icons.svg#menu"></c-icon>
+      <span class="font-alt font-semibold">Смотреть все позиции</span>
+    </a>
+
+  </div>
+</div>
