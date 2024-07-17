@@ -1,0 +1,220 @@
+<%= require('./html-includes/header.html')() %>
+
+<section class="p-section">
+  <div class="flex items-center gap-3 text-sm text-default/60 mb-8">
+    <a href="javascript:;" class="hover-underline">Главная</a>
+    <c-icon class="icon" href="img/icons.svg#to-right"></c-icon>
+    <a href="javascript:;" class="hover-underline">Каталог ЖБИ</a>
+  </div>
+  <div class="title mb-6 sm:mb-10">Каталог ЖБИ</div>
+
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-7">
+    <% for(let i = 0; i < 9; i++) { %>
+    <%= require('./html-includes/category-item.html')() %>
+    <% } %>
+  </div>
+</section>
+
+<!-- Преимущества ЖБИ -->
+<section class="advantages overflow-hidden">
+  <div class="title mb-6 sm:mb-10">Преимущества ЖБИ</div>
+  <div class="advantages-slider swiper overflow-visible">
+    <div class="swiper-wrapper">
+      <!-- Прочность -->
+      <div class="swiper-slide">
+        <div class="advantages-item">
+          <div class="flex items-center gap-2 sm:gap-4">
+            <c-icon class="icon text-3.5xl text-primary" href="img/icons.svg#shield-warning"></c-icon>
+            <div class="font-alt font-bold text-xl/xs sm:text-1.5xl">Прочность</div>
+          </div>
+          <div class="mt-4 opacity-80 max-sm:text-sm">
+            Бетон обладает высокой устойчивостью к сжимающим нагрузкам.
+            Арматура же, напротив, отличается сопротивлением к растяжению.
+            Таким образом, за счет сочетания этих материалов обеспечивается
+            повышенная прочность изделий. Кроме того, с течением времени
+            прочность железобетона увеличивается.
+          </div>
+        </div>
+      </div>
+      <!-- Огнестойкость и жаростойкость -->
+      <div class="swiper-slide">
+        <div class="advantages-item">
+          <div class="flex items-center gap-2 sm:gap-4">
+            <c-icon class="icon text-3.5xl text-primary" href="img/icons.svg#fire"></c-icon>
+            <div class="font-alt font-bold text-xl/xs sm:text-1.5xl">Огнестойкость и жаростойкость</div>
+          </div>
+          <div class="mt-4 opacity-80 max-sm:text-sm">
+            Защитный бетонный слой, толщина которого для различных
+            изделий, как правило, колеблется в пределах от 1,5-2 см и более,
+            позволяет железобетонным изделиям сохранять свои свойства
+            при длительном или постоянном воздействии высоких температур,
+            а также непродолжительному воздействию открытого огня
+            при пожаре.
+          </div>
+        </div>
+      </div>
+      <!-- Сейсмостойкость -->
+      <div class="swiper-slide">
+        <div class="advantages-item">
+          <div class="flex items-center gap-2 sm:gap-4">
+            <c-icon class="icon text-3.5xl text-primary" href="img/icons.svg#earthquake"></c-icon>
+            <div class="font-alt font-bold text-xl/xs sm:text-1.5xl">Сейсмостойкость</div>
+          </div>
+          <div class="mt-4 opacity-80 max-sm:text-sm">
+            Монолитность и повышенная жесткость значительно повышают
+            устойчивость конструкций из железобетона. Поэтому ЖБИ
+            являются незаменимым материалом при возведении
+            различных сооружений и зданий, в том числе в сейсмически
+            активных районах.
+          </div>
+        </div>
+      </div>
+      <!-- Стойкость к воздействию атмосферных осадков -->
+      <div class="swiper-slide">
+        <div class="advantages-item">
+          <div class="flex items-center gap-2 sm:gap-4">
+            <c-icon class="icon text-3.5xl text-primary" href="img/icons.svg#benzene-ring"></c-icon>
+            <div class="font-alt font-bold text-xl/xs sm:text-1.5xl">
+              Стойкость к воздействию
+              атмосферных осадков
+            </div>
+          </div>
+          <div class="mt-4 opacity-80 max-sm:text-sm">
+            Бетон химически инертен, поэтому не вступает во взаимодействие
+            с химическими соединениями и микроорганизмами, которые
+            содержатся в воде.
+          </div>
+        </div>
+      </div>
+      <!-- Стойкость к изменениям климатических условий -->
+      <div class="swiper-slide">
+        <div class="advantages-item">
+          <div class="flex items-center gap-2 sm:gap-4">
+            <c-icon class="icon text-3.5xl text-primary" href="img/icons.svg#cloud-bolt"></c-icon>
+            <div class="font-alt font-bold text-xl/xs sm:text-1.5xl">
+              Стойкость к изменениям
+              климатических условий
+            </div>
+          </div>
+          <div class="mt-4 opacity-80 max-sm:text-sm">
+            Низкая теплопроводность бетона защищает стальную арматуру
+            от резких перепадов температур, а также препятствует
+            возникновению коррозии. Кроме того, бетон не разрушается
+            и не утрачивает первоначальных характеристик
+            даже при эксплуатации на открытом воздухе.
+          </div>
+        </div>
+      </div>
+      <!-- Технологичность -->
+      <div class="swiper-slide">
+        <div class="advantages-item">
+          <div class="flex items-center gap-2 sm:gap-4">
+            <c-icon class="icon text-3.5xl text-primary" href="img/icons.svg#settings-alt"></c-icon>
+            <div class="font-alt font-bold text-xl/xs sm:text-1.5xl">Технологичность</div>
+          </div>
+          <div class="mt-4 opacity-80 max-sm:text-sm">
+            Бетон - это универсальный строительный материал, который
+            открывает бесконечные возможности для творчества и инноваций.
+            Из бетона можно создать практически любую форму.
+          </div>
+        </div>
+      </div>
+      <!-- Стоимость -->
+      <div class="swiper-slide">
+        <div class="advantages-item">
+          <div class="flex items-center gap-2 sm:gap-4">
+            <c-icon class="icon text-3.5xl text-primary" href="img/icons.svg#wallet"></c-icon>
+            <div class="font-alt font-bold text-xl/xs sm:text-1.5xl">Стоимость</div>
+          </div>
+          <div class="mt-4 opacity-80 max-sm:text-sm">
+            Низкая стоимость сырья, благодаря которой значительно снижаются
+            затраты на производство изделий и строительство сооружений.
+          </div>
+        </div>
+      </div>
+      <!-- Долговечность -->
+      <div class="swiper-slide">
+        <div class="advantages-item">
+          <div class="flex items-center gap-2 sm:gap-4">
+            <c-icon class="icon text-3.5xl text-primary" href="img/icons.svg#hourglass"></c-icon>
+            <div class="font-alt font-bold text-xl/xs sm:text-1.5xl">Долговечность</div>
+          </div>
+          <div class="mt-4 opacity-80 max-sm:text-sm">
+            Способность бетона к противодействию сжимающим нагрузкам
+            и способность стальной арматуры к нейтрализации растягивающих
+            усилий дополняют друг друга, обеспечивая, таким образом, высокую
+            надежность изделий и значительное увеличение срока их службы.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  new Swiper('.advantages-slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+  })
+</script>
+
+<!-- В зависимости от метода изготовления ЖБИ делятся: -->
+<section class="pb-16">
+  <div class="title mb-6 sm:mb-10">В зависимости от метода изготовления ЖБИ делятся:</div>
+  <div class="grid lg:grid-cols-2 gap-4 sm:gap-7">
+    <% for(let i = 0; i < 2; i++) { %>
+    <div class="border border-default/20 rounded-2.5xl">
+      <div class="flex xs:items-center gap-4 xs:gap-6 p-4 max-xs:flex-col">
+        <div class="w-44 ratio ratio-[178/156] rounded-2xl overflow-hidden shrink-0">
+          <img src="/img/test.gif" alt="" class="absolute-fit object-cover">
+        </div>
+        <div>
+          <div class="text-1.5xl font-alt font-bold">СБОРНЫЕ</div>
+          <div class="mt-3 opacity-80 max-sm:text-sm">
+            Производятся на заводе и поставляются
+            на строительную площадку в готовом виде
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-default/20"></div>
+      <div class="p-6 flex flex-col gap-8">
+        <div>
+          <div class="flex items-center gap-2">
+            <c-icon class="icon text-2xl text-green" href="img/icons.svg#circle-plus"></c-icon>
+            <div class="font-bold font-alt">Плюсы</div>
+          </div>
+          <div class="mt-3 opacity-80 max-sm:text-sm">
+            Основное преимущество сборных железобетонных изделий
+            заключается в том, что ключевые технологические процессы
+            происходят на заводе, что позволяет достичь высоких
+            показателей по качеству и срокам изготовления конструкций.
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <c-icon class="icon text-2xl text-red" href="img/icons.svg#circle-minus"></c-icon>
+            <div class="font-bold font-alt">Минусы</div>
+          </div>
+          <div class="mt-3 opacity-80 max-sm:text-sm">
+            Недостатком сборных изделий является невозможность выпускать достаточно широкий ассортимент конструкций (разнообразие форм изготавливаемых конструкций ограничивается типовыми опалубками). Однако современные технологии позволяют изготавливать нетиповые ЖБИ по чертежам или эскизам заказчика
+          </div>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+  <div class="mt-6 sm:mt-10 bg-grey p-4 sm:p-10 rounded-2.5xl max-sm:text-sm">
+    <b>В зависимости от способа армирования ЖБИ изготавливаются с ненапрягаемой или предварительно напрягаемой арматурой. </b> <br>
+    Армирование бетона ненапрягаемыми стальными стержнями, сетками или каркасами не предохраняет изделия, которые работают на изгиб (например, балки, опоры и др.), от образования трещин в растянутой зоне. Появление трещин отрицательно сказывается не только на эстетике, но и на работе железобетонного элемента: увеличиваются прогибы, в трещины проникают влага и газы, рано или поздно приводящие к коррозии стальной арматуры. Для того чтобы избежать появления трещин для опорных железобетонных конструкций предусматривается предварительное сжатие бетона за счет растяжения арматуры в местах, подверженных растяжению. В предварительно сжатом бетоне трещины исключены, так как значение растягивающих усилий значительно меньше напряжения предварительного сжатия.
+  </div>
+  <div class="mt-6 sm:mt-10 leading-normal max-sm:text-sm">
+    Защита ЖБИ от негативного воздействия внешней среды подразделяется на первичную, в которую входят мероприятия на стадии изготовления и возведения конструкций, и вторичную, в которую входят дополнительные мероприятия, проводимые в случаях, когда первичная защита не обеспечивает требуемой долговечности и эксплуатационных характеристик конструкций. Первичная защита конструкций обеспечивается применением различных по составу и эксплуатационным характеристикам бетонов, имеющих повышенную коррозионную стойкость к агрессивным воздействиям окружающей среды и способность защищать арматуру от коррозии. Вторичная защита включает в себя применение различного рода химически стойких и мало проницаемых антикоррозионных покрытий, оклеечной и обмазочной изоляции, футеровок и пропиток. Гидроизоляция подземных сооружений производится даже для бетонов с повышенной проектной водонепроницаемостью.
+    <br><br>
+    Для защиты железобетонных конструкций от воздействия воды и агрессивных сред также применяется проникающая гидроизоляция, которая модифицирует структуру бетона, увеличивая его водонепроницаемость, что предотвращает разрушение бетонных конструкций и коррозию арматуры. Гидроизолирующее действие материалов основано на взаимодействии химических добавок с кальцием – основой частью цементов, в порах бетона, вызывающем осаждение и структурное изменение кальцитов на поверхности пор, приводящее в результате к уменьшению размеров сечения пор, что и препятствует поступлению воды.
+    <br><br>
+    Дополнительная защита ЖБИ необходима даже в благоприятной среде, ввиду возможного изменения гидрогеологических условий площадки в будущем и изменения эксплуатационных характеристик сооружения.
+  </div>
+</section>
+
+<%= require('./html-includes/consultation.html')() %>
+<%= require('./html-includes/footer.html')() %>

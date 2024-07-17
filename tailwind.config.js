@@ -65,6 +65,12 @@ module.exports = {
         [30]: 30 * 4 / 16 + 'rem',
         [65]: '16.25rem'
       },
+      lineHeight: {
+        xs: 1.1
+      },
+      borderRadius: {
+        ['2.5xl']: 20 / 16 + 'rem',
+      },
       fontSize: {
         '2xs': [(10 / 16) + 'rem', '1.35'],
         '1.5xl': ['1.375rem', '1.35'],
