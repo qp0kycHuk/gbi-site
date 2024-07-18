@@ -1,0 +1,70 @@
+<%= require('./html-includes/header.html')() %>
+<%= require('./html-includes/breadcrumps.html')() %>
+
+<section class="pb-16">
+  <div class="title mb-6 sm:mb-8 ">Опоры ЛЭП</div>
+
+  <div class="flex">
+    <div class="filter">
+      <div class="group flex flex-col" data-toggle-cover>
+        <button class="btn btn-primary text-default px-3 -mx-3" data-toggle-link>
+          <div class="font-alt font-bold uppercase">типы опор лэп</div>
+          <c-icon class="icon text-xl ml-auto group-[.toggle-active]:-rotate-90" href="img/icons.svg#to-right"></c-icon>
+        </button>
+
+        <div class="flex flex-col gap-4 mt-5 items-start is-active-enabled mb-8 toggle-active" data-toggle-content data-toggle-static>
+          <a href="javascript:;" class="btn btn-text btn-primary hover-underline relative">
+            <div class="absolute -inset-2"></div>
+            <span class="text-sm font-semibold">Опоры</span>
+          </a>
+          <% for(let i = 0; i < 5; i++) { %>
+          <a href="javascript:;" class="btn btn-text hover-underline relative">
+            <div class="absolute -inset-2"></div>
+            <span class="text-sm opacity-70">Элементы опор</span>
+          </a>
+          <% } %>
+        </div>
+      </div>
+      <div class="group flex flex-col" data-toggle-cover>
+        <button class="btn btn-primary text-default px-3 -mx-3" data-toggle-link>
+          <div class="font-alt font-bold uppercase">Цена</div>
+          <!-- <div class="font-alt font-bold uppercase">длина, мм</div> -->
+          <!-- <div class="font-alt font-bold uppercase">ширина, мм</div> -->
+          <c-icon class="icon text-xl ml-auto group-[.toggle-active]:-rotate-90" href="img/icons.svg#to-right"></c-icon>
+        </button>
+
+        <div class="flex flex-col gap-4 mt-5 items-start is-active-enabled mb-8" data-toggle-content data-toggle-static>
+          Битриксовые приколы 🤡
+        </div>
+      </div>
+      <div class="group flex flex-col" data-toggle-cover>
+        <button class="btn btn-primary text-default px-3 -mx-3" data-toggle-link>
+          <div class="font-alt font-bold uppercase">класс бетона</div>
+          <c-icon class="icon text-xl ml-auto group-[.toggle-active]:-rotate-90" href="img/icons.svg#to-right"></c-icon>
+        </button>
+
+        <div class="flex flex-col gap-4 mt-5 items-start is-active-enabled mb-8" data-toggle-content data-toggle-static>
+          <% for(let i = 0; i < 10; i++) { %>
+          <label class="flex items-center gap-3 relative cursor-pointer">
+            <div class="absolute -inset-2"></div>
+            <input type="checkbox" class="checkbox checkbox-sm rounded">
+            <span class="text-sm opacity-70">В24</span>
+          </label>
+          <% } %>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-fill mt-8">
+        <span class="font-alt font-semibold">Сохранить</span>
+      </button>
+      <button class="btn btn-primary btn-contur mt-4">
+        <span class="font-alt font-semibold">Сбросить</span>
+      </button>
+    </div>
+    <div class="catalog-content">
+      <div class="catalog-table"></div>
+    </div>
+  </div>
+</section>
+
+<%= require('./html-includes/footer.html')() %>
