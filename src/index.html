@@ -155,42 +155,7 @@
   </div>
 </section>
 
-<!-- Где мы находимся -->
-<section class="location">
-  <div class="location-image">
-    <picture>
-      <source media="(min-width: 769.98px)" srcset="/img/location-map.svg">
-      <img src="img/location-map-sm.svg" alt="">
-    </picture>
-  </div>
-  <img src="img/location-texture.png" alt="" class="absolute-fit">
-  <div class="location-content">
-    <div class="title mb-5 md:mb-8">Где мы находимся</div>
-    <div class="text-sm">
-      Группа компаний «Блок» – сеть филиалов по городам России. <br>
-      Вы можете выбрать с каким представительством вам удобнее работать
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-x-10 sm:gap-y-4 mt-8 sm:w-max max-w-full">
-      <% for(let i = 0; i < 12; i++) { %>
-      <div class="flex items-center gap-2">
-        <c-icon class="icon text-green" href="img/icons.svg#gal-ochka"></c-icon>
-        <div class="text-sm">г. Санкт-Петербург</div>
-      </div>
-      <% } %>
-    </div>
-    <div class="mt-6 sm:mt-14">
-      <div class="font-semibold max-sm:text-sm">Если Вашего населенного пункта нет в списке, позвоните по телефону:</div>
-      <div class="flex mt-1">
-        <a href="javascript:;" class="hover:underline underline-offset-4 font-alt font-bold text-2xl sm:text-3.5xl ">
-          8 (861) 279-36-00
-        </a>
-      </div>
-      <div class="mt-1 max-sm:text-sm">
-        и мы оперативно свяжемся с вами и проконсультируем по любому вопросу
-      </div>
-    </div>
-  </div>
-</section>
+<%= require('./html-includes/location.html')() %>
 
 <!-- О компании -->
 <section class="about">
@@ -258,8 +223,6 @@
     </div>
   </div>
 </section>
-
-
 
 <%= require('./html-includes/consultation.html')() %>
 <%= require('./html-includes/footer.html')() %>

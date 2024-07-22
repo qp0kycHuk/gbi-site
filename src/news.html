@@ -1,0 +1,33 @@
+<%= require('./html-includes/header.html')() %>
+<%= require('./html-includes/breadcrumps.html')() %>
+
+<section class="pb-16">
+  <div class="title mb-6 sm:mb-10">Новости</div>
+  <div class="grid xs:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+    <% for(let i = 0; i < 10; i++) { %>
+    <a href="javascript:;" class="news-item ">
+      <div class="news-item-image ratio ratio-[2/1]">
+        <img src="/img/test.gif" alt="" class="absolute-fit object-cover">
+      </div>
+      <div class="news-item-content">
+        <div class="text-sm opacity-60 mb-3">08.08.2022</div>
+        <div class="font-bold font-alt sm:text-xl mb-3">
+          Виды железобетонных изделий:
+          какие существуют
+        </div>
+        <div class="line-clamp-3 text-sm opacity-70">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic ut quisquam, iste doloribus accusantium rem impedit ea minima aliquid labore illo nostrum? Quos incidunt repellendus voluptatibus? Veritatis quisquam earum consectetur.
+        </div>
+        <div class="mt-auto"></div>
+        <button class="btn btn-primary btn-fill mt-6">
+          <span class="font-alt font-semibold">Подробнее</span>
+        </button>
+      </div>
+    </a>
+    <% } %>
+  </div>
+  <%= require('./html-includes/pagination.html')() %>
+</section>
+
+<%= require('./html-includes/consultation.html')() %>
+<%= require('./html-includes/footer.html')() %>

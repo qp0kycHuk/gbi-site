@@ -1,0 +1,74 @@
+<%= require('./html-includes/header.html')() %>
+<%= require('./html-includes/breadcrumps.html')() %>
+
+<section class="pb-16">
+  <div class="title mb-6 sm:mb-8 ">Опоры ЛЭП</div>
+
+  <div class="catalog">
+    <div class="filter" id="catalog-filter">
+      <div class="group flex flex-col toggle-active" data-toggle-cover>
+        <button class="btn btn-primary text-default px-3 -mx-3 toggle-active" data-toggle-link>
+          <div class="font-alt font-bold uppercase">направление</div>
+          <c-icon class="icon text-xl ml-auto group-[.toggle-active]:-rotate-90" href="img/icons.svg#to-right"></c-icon>
+        </button>
+
+        <div class="flex flex-col gap-4 mt-5 items-start is-active-enabled mb-8 toggle-active" data-toggle-content data-toggle-static>
+          <a href="javascript:;" class="btn btn-text btn-primary hover-underline relative">
+            <div class="absolute -inset-2"></div>
+            <span class="text-sm font-semibold">Все направления</span>
+          </a>
+          <% for(let i = 0; i < 5; i++) { %>
+          <a href="javascript:;" class="btn btn-text hover-underline relative w-full ">
+            <div class="absolute -inset-2"></div>
+            <span class="text-sm opacity-70 truncate" title="Инженерное строительство Инженерное строительство">
+              Инженерное строительство Инженерное строительство
+            </span>
+          </a>
+          <% } %>
+        </div>
+      </div>
+
+      <div class="mt-auto"></div>
+      <button class="btn btn-primary btn-contur gap-2 lg:hidden" data-toggle-link="catalog-filter">
+        <c-icon class="icon" href="img/icons.svg#circle-cross"></c-icon>
+        <span class="font-semibold font-alt">Закрыть фильтр</span>
+      </button>
+    </div>
+    <div class="filter-shadow"></div>
+    <div class="catalog-content">
+      <button class="btn btn-primary btn-contur gap-2 lg:hidden max-sm:w-full mb-3" data-toggle-link="catalog-filter">
+        <c-icon class="icon" href="img/icons.svg#filter"></c-icon>
+        <span class="font-semibold font-alt">Открыть фильтр</span>
+      </button>
+      <div class="flex flex-col gap-2">
+        <% for(let i = 0; i < 10; i++) { %>
+        <div class="object-item">
+          <div class="flex sm:items-center gap-3 p-4 sm:p-6 max-sm:flex-col">
+            <div class="text-xl font-alt font-bold">
+              Скоростная автомобильная дорога «Москва – Санкт-Петербург»
+            </div>
+            <div class="flex items-center gap-2 sm:ml-auto">
+              <c-icon class="icon text-xl text-primary" href="img/icons.svg#calendar"></c-icon>
+              <div class="text-sm font-alt">25.06.2021</div>
+            </div>
+          </div>
+          <div class="border-t border-default/10"></div>
+          <div class="p-4 sm:p-6">
+            <div class="opacity-60 text-sm">
+              В районе п. Усть-Луга Ленинградской области началось строительство Комплекса по переработке этансодержащего газа (КПЭГ) —
+              уникального в мире кластера, объединяющего и газопереработку, и газохимию, и сжижение природного газа.
+            </div>
+            <button class="btn btn-primary btn-fill mt-6">
+              <span class="font-alt font-semibold">Подробнее</span>
+            </button>
+          </div>
+        </div>
+        <% } %>
+      </div>
+
+      <%= require('./html-includes/pagination.html')() %>
+    </div>
+  </div>
+</section>
+
+<%= require('./html-includes/footer.html')() %>
