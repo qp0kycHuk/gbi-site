@@ -943,3 +943,216 @@ body {
     color: theme('colors.primary');
   }
 }
+
+.about-video {
+  display: block;
+
+  &-button {
+    --tw-btn-size: 112px;
+
+    position     : absolute;
+    left         : calc(50% - var(--tw-btn-size) / 2);
+    top          : calc(50% - var(--tw-btn-size) / 2);
+    border-radius: 50%;
+    color        : #fff;
+    font-size    : 36px;
+
+    background     : radial-gradient(337% 105% at 0% 100%, rgba(255, 255, 255, 0.37) 0%, rgba(255, 255, 255, 0.145) 100%) !important;
+    box-shadow     : 0 0 0 10px rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+
+
+    @media (max-width: theme('screens.sm')) {
+      --tw-btn-size: 48px;
+
+      font-size : 16px;
+      box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.25);
+    }
+  }
+}
+
+.page-top {
+  background     : theme('colors.primary');
+  color          : #fff;
+  min-height     : 370px;
+  padding-top    : 32px;
+  padding-bottom : 32px;
+  position       : relative;
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+
+  @media (max-width: theme('screens.sm')) {
+    justify-content: flex-start;
+    padding-top    : 40px;
+    min-height     : 394px;
+  }
+
+  &-shadow {
+    background: linear-gradient(96.13deg, theme('colors.primary') 42.47%, rgba(0, 0, 0, 0) 69.82%);
+
+    @media (max-width: theme('screens.sm')) {
+      background: linear-gradient(180deg, theme('colors.primary') 40.1%, rgba(0, 0, 0, 0) 100%);
+
+    }
+
+  }
+
+  &-content {
+    position: relative;
+
+    br {
+      @media (max-width: theme('screens.sm')) {
+        display: none;
+      }
+    }
+
+  }
+
+  .hover-underline::before {
+    background: #fff;
+  }
+}
+
+.about-jigurda {
+  display      : flex;
+  align-items  : center;
+  gap          : 40px;
+  padding      : 16px;
+  border-radius: 20px;
+  box-shadow   : 0 10px 16px 0 rgba(0, 0, 0, 0.04);
+  background   : theme('colors.l3');
+
+  @media (max-width: theme('screens.sm')) {
+    flex-direction: column;
+    gap           : 16px;
+  }
+
+  &-image {
+    width        : 162px;
+    height       : 162px;
+    border-radius: 20px;
+    flex-shrink  : 0;
+    background   :
+      url("../img/about-jigurda-texture.png") no-repeat center / cover,
+      radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 73.05%), #05496F;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    position       : relative;
+
+    @media (max-width: theme('screens.sm')) {
+      width : 100%;
+      height: 130px;
+
+    }
+
+    &::before {
+      content       : '';
+      position      : absolute;
+      inset         : 0;
+      pointer-events: none;
+      border-radius : inherit;
+
+      border: 2px solid #5579B4;
+
+      mask: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+
+
+    }
+  }
+}
+
+.about-location {
+  min-height   : 370px;
+  background   : theme('colors.primary / 5%');
+  border-radius: 20px;
+  padding      : 56px;
+  display      : flex;
+  align-items  : center;
+  position     : relative;
+  overflow     : hidden;
+
+  @media (max-width: theme('screens.lg')) {
+    min-height    : 0;
+    padding       : 24px 16px;
+    padding-bottom: 330px;
+  }
+
+  @media (max-width: theme('screens.xs')) {
+    padding-bottom: calc(100vw * 330 / 375);
+  }
+
+  &-content {
+    width    : 500px;
+    max-width: 100%;
+    position : relative;
+  }
+
+  &-map {
+    position: absolute;
+    right   : 0;
+    bottom  : 0;
+
+    @media (max-width: theme('screens.sm')) {
+      width : 100%;
+      bottom: auto;
+      top   : calc(100% - 330px);
+    }
+
+    @media (max-width: theme('screens.xs')) {
+      top   : auto;
+      bottom: 0;
+    }
+  }
+
+  &-lines {
+    position: absolute;
+    right   : 0;
+    top     : 0;
+
+    @media (max-width: theme('screens.sm')) {
+      width: 100%;
+    }
+  }
+
+  &-image {
+    width        : 200px;
+    position     : absolute;
+    border-radius: 20px;
+    overflow     : hidden;
+
+    @media (max-width: theme('screens.sm')) {
+      width: 148px;
+    }
+
+    &-1 {
+      top : 48px;
+      left: calc(50% + 48px);
+
+      @media (max-width: theme('screens.lg')) {
+        inset: auto calc(50% + 20px) 140px auto;
+      }
+
+      @media (max-width: theme('screens.sm')) {
+        right: 50%;
+      }
+    }
+
+    &-2 {
+      bottom: 48px;
+      right : 48px;
+
+      @media (max-width: theme('screens.lg')) {
+        bottom: 24px;
+        right : auto;
+        left  : calc(50% + 20px);
+      }
+
+      @media (max-width: theme('screens.sm')) {
+        left: 50%;
+      }
+
+    }
+  }
+}

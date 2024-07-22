@@ -1,5 +1,80 @@
 <%= require('./html-includes/header.html')() %>
+<%= require('./html-includes/page-top.html')() %>
 
+<section class="py-16">
+  <div class="about-jigurda mb-7">
+    <div class="about-jigurda-image">
+      <img src="/img/logo.svg" alt="" class="w-32">
+    </div>
+    <div class="about-jigurda-content">
+      <b>ГК «Блок» ведет свою деятельность с 22 июня 2006 года</b> и специализируется на производстве
+      и поставках железобетонных изделий (ЖБИ), а также поставках металлопроката со склада.
+    </div>
+  </div>
+  <div class="grid grid-cols-2 gap-4 sm:gap-7">
+    <% for(let i = 0; i < 2; i++) { %>
+    <div class="ratio ratio-[60/35] rounded-xl sm:rounded-2.5xl overflow-hidden">
+      <img src="/img/test.gif" alt="" class="absolute-fit object-cover">
+    </div>
+    <% } %>
+  </div>
+  <div class="mt-16">
+    <div class="title mb-8">Узнайте о нас больше</div>
+
+    <a href="https://www.youtube.com/watch?v=VOPZf3zWceo" data-fancybox class="about-video ratio ratio-[1230/684] rounded-2.5xl overflow-hidden">
+      <img src="/img/test.gif" alt="" class="absolute-fit object-cover">
+
+      <div class="about-video-button btn btn-icon">
+        <c-icon class="icon" href="img/icons.svg#play"></c-icon>
+      </div>
+    </a>
+  </div>
+
+  <div class="about-location mt-10">
+    <picture>
+      <source media="(min-width: 609.98px)" srcset="/img/about-location-map.svg">
+      <img src="img/about-location-map-sm.svg" alt="" class="about-location-map">
+    </picture>
+    <picture>
+      <source media="(min-width: 609.98px)" srcset="/img/about-location-lines.svg">
+      <img src="img/about-location-lines-sm.svg" alt="" class="about-location-lines">
+    </picture>
+    <div class="about-location-image about-location-image-1 ratio ratio-[200/120]">
+      <img src="img/test.gif" alt="" class="absolute-fit object-cover">
+    </div>
+    <div class="about-location-image about-location-image-2 ratio ratio-[200/120]">
+      <img src="img/test.gif" alt="" class="absolute-fit object-cover">
+    </div>
+    <div class="about-location-content">
+      <div class="sm:text-xl font-alt">
+        Более чем за 17 лет Группа Компаний «БЛОК»
+        стала крупным холдингом федерального масштаба
+        и специализируется на производстве и поставке
+        типовых и нетиповых железобетонных изделий
+        любой степени сложности.
+      </div>
+      <div class="mt-10 font-alt sm:text-xl font-semibold">
+        География поставок – вся Россия.
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-8 sm:mt-10">
+    <div class="max-sm:text-sm">
+      За время работы ГК БЛОК зарекомендовала себя как надежного партнера, участвуя в качестве поставщика во многих значимых проектах промышленного, жилого и энергетического строительства. Ознакомится с нашими проектами вы можете в разделе «Объекты»
+    </div>
+    <div class="flex mt-6">
+      <a href="javascript:;" class="btn btn-fill btn-primary">
+        <span class="font-alt font-semibold">Смотреть объекты</span>
+      </a>
+    </div>
+    <div class="mt-6 sm:mt-10 border-t border-default/10"></div>
+    <div class="sm:text-xl font-alt font-semibold mt-6 sm:mt-10">
+      Будем рады, если знакомство с нашим сайтом и компанией приведет к взаимовыгодному сотрудничеству
+      по профильным направлениям деятельности
+    </div>
+  </div>
+</section>
 
 <%= require('./html-includes/consultation.html')() %>
 <%= require('./html-includes/footer.html')() %>
