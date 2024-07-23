@@ -85,10 +85,10 @@ module.exports = {
     require('@qpokychuk/tailwind-button-plugin'),
     require('@qpokychuk/tailwind-ratio-plugin'),
     require('@qpokychuk/tailwind-input-plugin')({
-      border: "1px solid theme('colors.default / 40%')",
+      border: "1px solid theme('colors.default / 20%')",
     }),
     require('@qpokychuk/tailwind-checkbox-plugin')({
-      border: "1px solid theme('colors.default / 40%')",
+      border: "1px solid theme('colors.default / 20%')",
     }),
     require('tailwindcss-border-styles')(),
   ],

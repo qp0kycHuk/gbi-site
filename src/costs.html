@@ -1,0 +1,111 @@
+<%= require('./html-includes/header.html')() %>
+<%= require('./html-includes/breadcrumps.html')() %>
+
+<section class="pb-16">
+  <div class="title mb-6 sm:mb-10">Цены на ЖБИ</div>
+  <div class="mb-4 sm:mb-8 sm:text-1.5xl font-alt font-bold">
+    Почему мы не можем указать точные цены на продукцию:
+  </div>
+  <div class="grid lg:grid-cols-2 gap-7">
+    <div class="advantages-item">
+      <div class="flex items-center gap-2 sm:gap-4">
+        <c-icon class="icon text-3.5xl text-primary" href="img/icons.svg#map-routing"></c-icon>
+        <div class="font-alt font-bold text-xl/xs sm:text-1.5xl">Цена может меняться от региона</div>
+      </div>
+      <div class="mt-4 opacity-80 max-sm:text-sm">
+        Железобетон состоит из бетонной смеси, инертных материалов и металла. Цена на составляющие может изменяться в зависимости от региона в большую так и в меньшую сторону. Поэтому очень важно учитывать регион, в котором будут производится изделия.
+      </div>
+    </div>
+    <div class="advantages-item">
+      <div class="flex items-center gap-2 sm:gap-4">
+        <c-icon class="icon text-3.5xl text-primary" href="img/icons.svg#box"></c-icon>
+        <div class="font-alt font-bold text-xl/xs sm:text-1.5xl">Необходимый объем</div>
+      </div>
+      <div class="mt-4 opacity-80 max-sm:text-sm">
+        Цена на изделие зависит от выпускаемого объема изделий. Чем больше партия, тем выгоднее для вас мы сможем сделать предложение.
+      </div>
+    </div>
+    <div class="advantages-item">
+      <div class="flex items-center gap-2 sm:gap-4">
+        <c-icon class="icon text-3.5xl text-primary" href="img/icons.svg#verified-check"></c-icon>
+        <div class="font-alt font-bold text-xl/xs sm:text-1.5xl">ГОСТ и ТУ</div>
+      </div>
+      <div class="mt-4 opacity-80 max-sm:text-sm">
+        Железобетонные изделия могут изготавливаться по разным техническим условиям в зависимости от технического задания. В зависимости от этого цена может изменится
+      </div>
+    </div>
+    <div class="advantages-item">
+      <div class="flex items-center gap-2 sm:gap-4">
+        <c-icon class="icon text-3.5xl text-primary" href="img/icons.svg#streets-navigation"></c-icon>
+        <div class="font-alt font-bold text-xl/xs sm:text-1.5xl">Доставка</div>
+      </div>
+      <div class="mt-4 opacity-80 max-sm:text-sm">
+        Железобетон мало произвести, его очень важно доставить на объект. Мы просчитаем для вас не только стоимость изделий, но и стоимость доставки. При необходимости разгрузочные работы.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pray relative">
+  <img src="/img/pray.jpg" alt="" class="absolute-fit object-cover">
+  <div class="absolute-fit bg-primary/80"></div>
+
+  <div class="pray-content relative">
+    <div class="title mb-4 lg:mb-10">
+      Вы можете рассчитать примерную стоимость изделий на нашем калькуляторе
+    </div>
+    <div class=" max-lg:text-sm">
+      Вы также можете оставить заявку - мы оперативно перезвоним вам, <br class="max-sm:hidden">
+      расскажем о железобетонных изделиях, ГОСТах, ТУ, сериях и подготовим <br class="max-sm:hidden">
+      для вас индивидуальное ценовое предложение
+    </div>
+    <div class="mt-8 lg:mt-18 flex">
+      <a href="javascript:;" class="btn btn-primary btn-whitebg">
+        <span class="font-alt font-semibold">Оставить заявку</span>
+      </a>
+    </div>
+  </div>
+  <div class="pray-form relative">
+    <div class="text-2xl sm:text-2.5xl font-alt font-bold mb-6">Калькулятор стоимости</div>
+    <div class="flex flex-col gap-4">
+      <% for(let i = 0; i < 4; i++) { %>
+      <label class="block">
+        <div class="font-medium mb-2">Вид строительства:</div>
+        <div class="relative">
+          <select name="" id="" class="input w-full appearance-none">
+            <option disabled hidden selected>Не выбрано</option>
+            <option value="">Вид строительства 1</option>
+            <option value="">Вид строительства 2</option>
+            <option value="">Вид строительства 3</option>
+          </select>
+          <c-icon class="icon absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" href="img/icons.svg#to-right"></c-icon>
+        </div>
+      </label>
+      <% } %>
+    </div>
+    <div class="text-2.5xl font-alt font-semibold mt-8">
+      0 ₽
+    </div>
+  </div>
+</section>
+
+<!-- ценовое предложение -->
+<section class="cost">
+  <div class="cost-content">
+    <div class="title mb-5 sm:mb-8">
+      Мы готовы предоставить <br class="max-sm:hidden">
+      вам ценовое предложение
+    </div>
+
+    <div class="">
+      Оставьте свой телефон или электронную почту
+    </div>
+
+    <button class="btn btn-primary btn-fill mt-6 sm:mt-12">
+      <span class="font-alt font-semibold"> Оставить заявку </span>
+    </button>
+  </div>
+</section>
+
+
+<%= require('./html-includes/footer.html')() %>
