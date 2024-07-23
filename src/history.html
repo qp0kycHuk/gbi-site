@@ -1,0 +1,103 @@
+<%= require('./html-includes/header.html')() %>
+<%= require('./html-includes/page-top.html')() %>
+
+<section class="py-16">
+  <div>
+    <% for(let i = 0; i < 4; i++) { %>
+    <div class="history-item">
+      <div class="history-item-number">
+        <span class="opacity-40">20</span>0<%= 6 + i %> г.
+      </div>
+      <div class="history-item-divider">
+        <div class="history-item-dot"></div>
+      </div>
+      <div class="history-item-content">
+        <p>
+          Общество с ограниченной ответственностью «Блок» ведет свою деятельность со второй половины 2006 года
+          и создавалась как оптовая торгующая компания железобетонными изделиями (ЖБИ). Изначально основным
+          рынком сбыта являлся Северо-Западный Федеральный округ, а именно город Санкт-Петербург
+          и Ленинградская область, основными товарными направлениями были:
+
+
+        </p>
+        <h2>Наружные инженерные сети:</h2>
+        <p>
+          элементы колодцев (кольца железобетонные), каналы непроходные (КН), железобетонные лотки
+          и крышки к ним (плиты перекрытия лотка), тепловые камеры.
+        </p>
+        <h2>Жилое строительство</h2>
+        <p>
+          (вентиляционные блоки, шахты лифтовые, перемычки, лестничные марши).
+        </p>
+        <h2>Нетиповая продукция по чертежам</h2>
+      </div>
+    </div>
+    <% } %>
+  </div>
+
+  <div class="history-jigurda mt-16">
+    <div class="history-jigurda-image">
+      <img src="/img/logo.svg" alt="" class="w-32">
+    </div>
+    <div class="history-jigurda-content font-alt sm:text-xl">
+      Управленческая команда ГК БЛОК использует все необходимые ресурсы для полного
+      исполнения обязательств по договорам с Заказчиками.
+      <br><br>
+      <b>Главный ориентир компании – это соотношение «надежность – сроки».</b>
+    </div>
+  </div>
+
+  <div class="mt-15 grid lg:grid-cols-2 gap-5 history-meaningless ">
+    <div class="row-span-2 bg-grey rounded-2.5xl history-meaningless-1">
+      <picture>
+        <source media="(min-width: 609.98px)" srcset="img/history-meaningless-1.png">
+        <img src="img/history-meaningless-1-sm.png" alt="" class="absolute right-0 bottom-0">
+      </picture>
+      <div class="relative">
+        <div class="text-2xl sm:text-2.5xl font-alt font-bold uppercase mb-6 sm:mb-10">БЛОК ЖБИ Россия</div>
+        <div class="max-sm:text-sm">
+          Более чем за 15 лет ГК БЛОК прошла путь от небольшой фирмы, торгующей ЖБИ в Санкт-Петербурге, до крупного холдинга федерального масштаба. В структуру холдинга входят:
+        </div>
+        <div class="mt-8 sm:mt-10 flex flex-col gap-5 max-sm:text-sm">
+          <% for(let i = 0; i < 5; i++) { %>
+          <div class="flex items-center gap-4">
+            <div class="size-9 bg-primary rounded-lg flex history-meaningless-gal-ochka">
+              <c-icon class="icon text-white m-auto" href="img/icons.svg#gal-ochka"></c-icon>
+            </div>
+            <div class="">
+              заводы по производству ЖБИ в Санкт-Петербурге
+              и Краснодарском крае;
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+    <div class="history-meaningless-2">
+      <img src="img/history-meaningless-2.png" alt="" class="absolute right-0 top-0 max-lg:hidden">
+      <div class="relative">
+        <div class="text-2xl sm:text-2.5xl font-alt font-bold uppercase mb-4 sm:mb-6">нас выбирают</div>
+        <div class=" max-sm:text-sm">
+          Больше 10 000 клиентов за эти годы выбрали <br class="max-sm:hidden">
+          Группу компаний «БЛОК» в качестве надежного <br class="max-sm:hidden">
+          партнера и поставщика для своего бизнеса.
+        </div>
+      </div>
+    </div>
+    <div class="p-8 rounded-2.5xl border border-default/10 history-meaningless-3">
+      <div class=" max-sm:text-sm">
+        За указанное время ГК БЛОК всегда исполняла свои обязательства, находила компромиссные решения в самых непростых ситуациях, никогда не выступала проигравшим ответчиком в судах.
+        <br><br>
+        В работе мы всегда руководствуемся правилами деловой этики и выполняем свои обязанности независимо от их правового характера.
+        <br><br>
+        Будем рады, если знакомство с нашим сайтом и компанией приведет к взаимовыгодному сотрудничеству по профильным направлениям деятельности. В разделе «Контакты» Вы найдете всю контактную информацию.
+      </div>
+      <div class="mt-8 font-semibold italic">
+        С уважением, команда ГК «Блок»
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= require('./html-includes/consultation.html')() %>
+<%= require('./html-includes/footer.html')() %>
