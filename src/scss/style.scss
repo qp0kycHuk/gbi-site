@@ -1205,7 +1205,8 @@ body {
 
   &-image {
     width        : 162px;
-    height       : 162px;
+    min-height   : 162px;
+    align-self   : stretch;
     border-radius: 20px;
     flex-shrink  : 0;
     background   : linear-gradient(0deg, #C2D9FF, #C2D9FF),
