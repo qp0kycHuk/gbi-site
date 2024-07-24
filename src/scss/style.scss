@@ -1171,6 +1171,7 @@ body {
   }
 }
 
+.vacancy-jigurda,
 .history-jigurda {
   display      : flex;
   align-items  : center;
@@ -1204,8 +1205,8 @@ body {
   }
 
   &-image {
-    width        : 162px;
-    min-height   : 162px;
+    width        : 192px;
+    min-height   : 192px;
     align-self   : stretch;
     border-radius: 20px;
     flex-shrink  : 0;
@@ -1223,6 +1224,12 @@ body {
 
     }
 
+  }
+}
+
+.vacancy-jigurda {
+  &-image {
+    background: #fff;
   }
 }
 
