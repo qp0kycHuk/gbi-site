@@ -721,6 +721,7 @@ body {
     background: theme('colors.l3');
     padding   : 16px;
     transition: .25s ease;
+    overflow  : auto;
 
     &:not(.toggle-active) {
       transform: translateX(-100%);
@@ -832,6 +833,7 @@ body {
 
   &-content {
     flex-grow: 1;
+    max-width: 100%;
   }
 }
 
@@ -1646,11 +1648,137 @@ body {
     padding  : 40px 32px;
 
     @media (max-width: theme('screens.md')) {
-      order: -1;
-    }
-
-    @media (max-width: theme('screens.md')) {
+      order  : -1;
       padding: 32px 16px 24px;
     }
   }
+}
+
+.catalog-table {
+  &-wrapper {
+    width   : 100%;
+    overflow: auto;
+
+    @media (max-width: theme('screens.sm')) {
+      width        : calc(100% + 30px);
+      margin-left  : -15px;
+      padding-right: 15px;
+      padding-left : 15px;
+
+    }
+  }
+
+  td {
+    &:first-of-type {
+      padding-left             : 16px;
+      border-start-start-radius: 10px;
+      border-end-start-radius  : 10px;
+    }
+
+    &:last-of-type {
+      padding-right          : 16px;
+      border-start-end-radius: 10px;
+      border-end-end-radius  : 10px;
+    }
+
+    @media (max-width: theme('screens.sm')) {
+      padding-left : 6px;
+      padding-right: 6px;
+    }
+  }
+
+  &-head {
+    color     : #fff;
+    background: theme('colors.primary');
+
+    td {
+      padding-top   : 16px;
+      padding-bottom: 16px;
+
+
+    }
+  }
+
+  &-row {
+    position  : relative;
+    transition: .2s ease;
+    border-top: 2px solid theme('colors.l3 / 0%');
+
+    @media (max-width: theme('screens.sm')) {
+      font-size: 14px;
+    }
+
+    @media(hover) {
+      &:hover {
+        background: theme('colors.primary / 5%');
+
+      }
+    }
+
+    &:nth-of-type(2n - 1) {
+      background: theme('colors.primary / 10%');
+
+      @media(hover) {
+        &:hover {
+          background: theme('colors.primary / 15%');
+
+        }
+      }
+    }
+
+
+    td {
+      padding-top   : 12px;
+      padding-bottom: 12px;
+    }
+  }
+}
+
+.dialog-policy {
+  width  : 970px;
+  padding: 40px;
+
+  @media (max-width: theme('screens.sm')) {
+    padding: 32px 16px;
+  }
+}
+
+.dialog-form {
+  width  : 970px;
+  display: flex;
+
+  @media (max-width: theme('screens.lg')) {
+    width         : 462px;
+    flex-direction: column;
+  }
+
+
+  &-image {
+    width                    : 462px;
+    max-width                : 100%;
+    flex-shrink              : 0;
+    position                 : relative;
+    overflow                 : hidden;
+    border-start-start-radius: inherit;
+    border-end-start-radius  : inherit;
+    min-height               : 484px;
+
+    @media (max-width: theme('screens.lg')) {
+      border-radius            : 0;
+      border-start-start-radius: inherit;
+      border-start-end-radius  : inherit;
+      min-height               : 300px;
+    }
+  }
+
+  &-content {
+    padding       : 40px;
+    display       : flex;
+    flex-direction: column;
+
+    @media (max-width: theme('screens.sm')) {
+      padding: 32px 16px;
+    }
+  }
+
 }

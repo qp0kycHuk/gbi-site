@@ -4,10 +4,10 @@
 <section class="pb-16">
   <div class="title mb-6 sm:mb-8 ">Опоры ЛЭП</div>
 
-  <div class="flex">
-    <div class="filter">
-      <div class="group flex flex-col" data-toggle-cover>
-        <button class="btn btn-primary text-default px-3 -mx-3" data-toggle-link>
+  <div class="catalog">
+    <div class="filter" id="catalog-filter">
+      <div class="group flex flex-col toggle-active" data-toggle-cover>
+        <button class="btn btn-primary text-default px-3 -mx-3 toggle-active" data-toggle-link>
           <div class="font-alt font-bold uppercase">типы опор лэп</div>
           <c-icon class="icon text-xl ml-auto group-[.toggle-active]:-rotate-90" href="img/icons.svg#to-right"></c-icon>
         </button>
@@ -54,15 +54,94 @@
         </div>
       </div>
 
-      <button class="btn btn-primary btn-fill mt-8">
-        <span class="font-alt font-semibold">Сохранить</span>
-      </button>
-      <button class="btn btn-primary btn-contur mt-4">
-        <span class="font-alt font-semibold">Сбросить</span>
-      </button>
+      <div class="mt-auto"></div>
+      <div class="flex flex-col mt-8 gap-2 lg:gap-4">
+        <button class="btn btn-primary btn-fill">
+          <span class="font-alt font-semibold">Сохранить</span>
+        </button>
+        <button class="btn btn-primary btn-contur">
+          <span class="font-alt font-semibold">Сбросить</span>
+        </button>
+        <button class="btn btn-primary btn-contur gap-2 lg:hidden" data-toggle-link="catalog-filter">
+          <c-icon class="icon" href="img/icons.svg#circle-cross"></c-icon>
+          <span class="font-semibold font-alt">Закрыть фильтр</span>
+        </button>
+      </div>
     </div>
     <div class="catalog-content">
-      <div class="catalog-table"></div>
+      <button class="btn btn-primary btn-contur gap-2 lg:hidden max-sm:w-full mb-3" data-toggle-link="catalog-filter">
+        <c-icon class="icon" href="img/icons.svg#filter"></c-icon>
+        <span class="font-semibold font-alt">Открыть фильтр</span>
+      </button>
+      <div class="catalog-table-wrapper">
+        <table class="catalog-table w-full">
+          <tr class="catalog-table-head font-alt font-semibold text-xs max-sm:whitespace-nowrap">
+            <td class="w-72">Наименование</td>
+            <td>ГОСТ/Серия</td>
+            <td class="text-center">
+              Длина,
+              мм
+            </td>
+            <td class="text-center">
+              Ширина,
+              мм
+            </td>
+            <td class="text-center">
+              Высота
+              мм
+            </td>
+            <td class="text-center">
+              Масса,
+              тонн
+            </td>
+            <td class="text-center">
+              Объем
+              бето..., м3
+            </td>
+            <td class="text-center">Цена</td>
+          </tr>
+          <% for(let i = 0; i < 10; i++) { %>
+          <tr class="catalog-table-row">
+            <td class="font-alt min-w-72">
+              Переходная угловая
+              промежуточная опора ПУП10-1
+
+              <a href="javascript:;" class="absolute-fit z-[1]"></a>
+            </td>
+            <td class="text-sm ">
+              <span class="opacity-60">Серия 3.407.1-143 вып.5</span>
+            </td>
+            <td class="text-center">16400</td>
+            <td class="text-center">210</td>
+            <td class="text-center">390</td>
+            <td class="text-center">4.26</td>
+            <td class="text-center">1.77</td>
+            <td class="font-alt font-bold text-center whitespace-nowrap">от 51300 ₽*</td>
+          </tr>
+          <% } %>
+        </table>
+      </div>
+
+      <button class="btn btn-primary btn-fill mt-8  sm:px-12 max-sm:w-full">
+        <span class="font-alt font-semibold">Показать еще</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mt-16 rounded-2.5xl bg-grey p-4 flex gap-6 lg:gap-10 max-lg:flex-col">
+    <div class="w-[412px] max-w-full shrink-0 ratio ratio-[412/320] rounded-2.5xl overflow-hidden">
+      <img src="img/test.gif" alt="" class="absolute-fit object-cover">
+    </div>
+    <div class="self-center">
+      <div class="font-alt font-semibold text-2xl sm:text-3.5xl mb-3 lg:mb-5">Опоры ЛЭП</div>
+      <div class="opacity-70 max-sm:text-sm">
+        Опоры ЛЭП – это специальные сооружения, предназначенные для удержания проводов воздушных линий электропередач на заданном расстоянии от поверхности земли и друг от друга. Опоры освещения обеспечивают освещение пространства на магистралях, улицах, площадях, скверах, парковках и стадионах в темное время суток. На нашем производстве железобетонных изделий используются новейшие технологии для обеспечения высокого качества изделий из железобетона и сохранения эксплуатационных качеств железобетонных опор ЛЭП на долгие годы. Наши опоры соответствуют всем требованиям ГОСТ.
+      </div>
+      <div class="flex mt-4 lg:hidden">
+        <a href="javascript:;" class="btn btn-primary btn-fill">
+          <span class="font-alt font-semibold">Смотреть продукцию</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
