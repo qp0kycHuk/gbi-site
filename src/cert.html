@@ -1,0 +1,63 @@
+<%= require('./html-includes/header.html')() %>
+<%= require('./html-includes/breadcrumps.html')() %>
+
+<section class="pb-16">
+  <div class="title mb-6 sm:mb-10">Благодарственные письма</div>
+
+  <div class="mb-8 border-b border-default/15 flex xs:max-md:gap-3">
+    <a href="javascript:;" class="btn btn-primary rounded-none px-2 md:px-15 border-b-2 border-primary">
+      <span class="md:text-1.5xl font-alt font-semibold text-default">Сертификаты</span>
+    </a>
+    <a href="javascript:;" class="btn btn-primary rounded-none px-2 md:px-15 ">
+      <span class="md:text-1.5xl font-alt font-semibold text-default">Благодарственные письма</span>
+    </a>
+  </div>
+
+  <c-menu class="lg:w-[346px] mb-8">
+    <c-menu-button class="btn btn-primary btn-contur btn-sm relative cursor-pointer border-default/15">
+      <span class="text-default">Все сферы</span>
+      <c-icon class="icon text-lg ml-auto text-default group-[.active]:-rotate-90" href="img/icons.svg#to-right"></c-icon>
+    </c-menu-button>
+    <c-menu-items class="p-3 w-full max-h-96 overflow-auto" placement="bottom">
+      <a href="javascript:;" class="btn btn-primary btn-light btn-sm justify-start">
+        <span class="text-default">Все сферы</span>
+      </a>
+      <% for(let i = 0; i < 10; i++) { %>
+      <a href="javascript:;" class="btn btn-primary btn-sm justify-start">
+        <span class="text-default">Нефтегазовое строительство</span>
+      </a>
+      <a href="javascript:;" class="btn btn-primary btn-sm justify-start">
+        <span class="text-default">Энергетическое строительство</span>
+      </a>
+      <% } %>
+    </c-menu-items>
+  </c-menu>
+
+  <div class="grid xs:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-7">
+    <% for(let i = 0; i < 10; i++) { %>
+    <a href="dialog-cert.html" data-fancybox-modal class="cert-item">
+      <div class="cert-item-image ratio ratio-[269/384]">
+        <img src="/img/test.gif" alt="" class="absolute-fit object-cover">
+      </div>
+      <div class="cert-item-content">
+        <div class="text-1.5xl text-center font-alt font-semibold mb-6">
+          Благодарственное
+          письмо
+        </div>
+        <div class="text-center text-sm">
+          ООО «Инвестиционностроительная
+          компания «Кубанское»
+          Строительство автомобильных
+          дорог и автомагистралей
+        </div>
+        <button class="mt-auto btn btn-primary btn-fill mx-auto">
+          <span class="font-alt font-semibold">Подробнее</span>
+        </button>
+      </div>
+    </a>
+    <% } %>
+  </div>
+</section>
+
+<%= require('./html-includes/consultation.html')() %>
+<%= require('./html-includes/footer.html')() %>

@@ -1,0 +1,29 @@
+<%= require('./html-includes/header.html')() %>
+
+<section class="pb-16">
+  <div class="title mb-6 sm:mb-10">Результаты поиска</div>
+  <%= require('./html-includes/search-input.html')() %>
+  <div class="font-alt font-semibold text-1.5xl mt-8">Найдено 3 результата</div>
+
+  <div class="flex flex-col gap-2 mt-8">
+    <% for(let i = 0; i < 3; i++) { %>
+    <div class="object-item">
+      <div class=" p-4 sm:p-6 ">
+        <div class="text-2xl sm:text-3.5xl font-alt font-bold mb-3">
+          Анкерные плиты
+        </div>
+
+        <div class="opacity-60 text-sm">
+          Железобетонные анкерные плиты, применяются в для закрепления в грунте металлических и железобетонных опор на оттяжках. Плиты анкерные разработаны шести типоразмеров и изготавливаются в трех типоформах. Плиты представляют собой прямоугольную конструкцию с одним центральным ребром.
+        </div>
+        <button class="btn btn-primary btn-fill mt-6">
+          <span class="font-alt font-semibold">Смотреть</span>
+        </button>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</section>
+
+<%= require('./html-includes/consultation.html')() %>
+<%= require('./html-includes/footer.html')() %>
