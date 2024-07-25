@@ -5,7 +5,7 @@
   --primary-rgb : #{cl(#1B4B9B)};
   --sec-rgb     : #{cl(#CE9B44)};
   --blue-rgb    : #{cl(#2173E5)};
-  --red-rgb     : #{cl(#c0392b)};
+  --red-rgb     : #{cl(#D03636)};
   --green-rgb   : #{cl(#00C838)};
   --yellow-rgb  : #{cl(#FECB29)};
 
@@ -98,6 +98,9 @@ body {
     }
 
     @media(hover) {
+      // temp
+
+      &-group:hover &::before,
       &:hover::before {
         transform: scaleX(1);
       }
@@ -1614,6 +1617,10 @@ body {
   background   : theme('colors.l3');
   box-shadow   : 0 16px 20px 0 rgba(35, 35, 35, 0.04);
   border-radius: 20px;
+
+  @media (max-width: theme('screens.sm')) {
+    border-radius: 16px;
+  }
 }
 
 .dialog-cert {
@@ -1781,4 +1788,83 @@ body {
     }
   }
 
+}
+
+.dialog-info {
+  padding       : 40px 15px 36px;
+  width         : 326px;
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+  text-align    : center;
+
+  &-image {
+    position       : relative;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    width          : 130px;
+    height         : 130px;
+    margin-bottom  : 30px;
+    border-radius  : 50%;
+    font-size      : 64px;
+    background     : currentColor;
+    background     :
+      radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 73.05%), currentColor;
+
+
+    &::after,
+    &::before {
+      content       : '';
+      position      : absolute;
+      inset         : 0;
+      pointer-events: none;
+      border-radius : inherit;
+    }
+
+    &::after {
+      box-shadow: 0 10px 30px 0 currentColor;
+      opacity   : .4;
+    }
+
+    &::before {
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      mask  : linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+
+    }
+
+  }
+}
+
+.dialog-confirm {
+  padding: 30px;
+  width  : 370px;
+
+  @media (max-width: theme('screens.sm')) {
+    padding: 32px 16px 16px;
+  }
+}
+
+.dialog-region {
+  width  : 970px;
+  padding: 40px 30px 24px;
+
+  @media (max-width: theme('screens.sm')) {
+    padding: 32px 16px 16px;
+  }
+}
+
+.region-item {
+  border-radius: 20px;
+  border       : 1px solid theme('colors.default / 10%');
+  padding      : 24px 32px 16px;
+  transition   : .2s ease;
+
+
+  @media(hover) {
+    &:hover {
+      border: 1px solid theme('colors.primary');
+
+    }
+  }
 }
