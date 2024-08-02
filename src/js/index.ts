@@ -9,9 +9,13 @@ import ripple from '@qpokychuk/ripple'
 import swiper from './swiper'
 import ymaps from './ymaps'
 import animations from './animations'
+// @ts-ignore
+import * as Vue from 'vue/dist/vue.esm-bundler.js'
 
 import '../scss/index.scss'
 
+// @ts-ignore
+window.Vue = Vue
 window.addEventListener('DOMContentLoaded', () => loadHandler())
 
 function loadHandler() {

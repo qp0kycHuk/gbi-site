@@ -46,7 +46,7 @@
   </div>
 </section>
 
-<section class="pray relative">
+<section class="pray relative" id="calc-app">
   <img src="/img/pray.jpg" alt="" class="absolute-fit object-cover">
   <div class="absolute-fit bg-primary/80"></div>
 
@@ -65,29 +65,182 @@
       </a>
     </div>
   </div>
-  <div class="pray-form relative">
+  <form class="pray-form relative">
     <div class="text-2xl sm:text-2.5xl font-alt font-bold mb-6">Калькулятор стоимости</div>
     <div class="flex flex-col gap-4">
-      <% for(let i = 0; i < 4; i++) { %>
+      <!-- Вид строительства: -->
       <label class="block">
-        <div class="font-medium mb-2">Вид строительства:</div>
+        <div class="font-medium mb-2">Вид строительства: </div>
         <div class="relative">
-          <select name="" id="" class="input w-full appearance-none">
-            <option disabled hidden selected>Не выбрано</option>
-            <option value="">Вид строительства 1</option>
-            <option value="">Вид строительства 2</option>
-            <option value="">Вид строительства 3</option>
+          <select class="input w-full appearance-none" v-model="currentTypeId">
+            <option disabled hidden selected value="null">Не выбрано</option>
+            <option v-for="item in types" :value="item.id">
+              {{ item.name}}
+            </option>
           </select>
           <c-icon class="icon absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" href="img/icons.svg#to-right"></c-icon>
         </div>
       </label>
-      <% } %>
+
+      <!-- Изделие: -->
+      <label class="block">
+        <div class="font-medium mb-2">Изделие:</div>
+        <div class="relative">
+          <select class="input w-full appearance-none" v-model="currentProductId" :disabled="!currentType?.products">
+            <option disabled hidden selected value="null">Не выбрано</option>
+            <option v-for="item in (currentType?.products || [])" :value="item.id">
+              {{ item.name}}
+            </option>
+          </select>
+          <c-icon class="icon absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" href="img/icons.svg#to-right"></c-icon>
+        </div>
+      </label>
+      <!-- Тип изделия -->
+      <label class="block">
+        <div class="font-medium mb-2">Тип изделия:</div>
+        <div class="relative">
+          <select class="input w-full appearance-none" v-model="currentProductTypeId" :disabled="!currentProduct?.productTypes">
+            <option disabled hidden selected value="null">Не выбрано</option>
+            <option v-for="item in (currentProduct?.productTypes || [])" :value="item.id">
+              {{ item.name}}
+            </option>
+          </select>
+          <c-icon class="icon absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" href="img/icons.svg#to-right"></c-icon>
+        </div>
+      </label>
+      <label class="block">
+        <div class="font-medium mb-2">Наименование:</div>
+        <div class="relative">
+          <select class="input w-full appearance-none" v-model="currentProductNameId" :disabled="!currentProductType?.productNames">
+            <option disabled hidden selected value="null">Не выбрано</option>
+            <option v-for="item in (currentProductType?.productNames || [])" :value="item.id">
+              {{ item.name }}
+            </option>
+          </select>
+          <c-icon class="icon absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" href="img/icons.svg#to-right"></c-icon>
+        </div>
+      </label>
+
     </div>
     <div class="text-2.5xl font-alt font-semibold mt-8">
-      0 ₽
+      {{currentProductName?.cost || 0}} ₽
     </div>
-  </div>
+  </form>
 </section>
+<script>
+  const calcApp = Vue.createApp({
+    data: () => ({
+      currentTypeId: null,
+      currentProductId: null,
+      currentProductTypeId: null,
+      currentProductNameId: null,
+      types: [{
+          id: 1,
+          name: 'Вид строительства 1',
+          products: [{
+              id: 2,
+              name: 'ВС1 - Изделие 1',
+              productTypes: [{
+                  id: 3,
+                  name: 'ВС1 - И1 - Тип изделия 1',
+                  productNames: [{
+                      id: 4,
+                      name: 'ВС1 - И1 - ТИ1 Наименование 1',
+                      cost: 1234
+                    },
+                    {
+                      id: 5,
+                      name: 'ВС1 - И1 - ТИ1 Наименование 2',
+                      cost: 1234
+                    },
+                  ]
+                },
+                {
+                  id: 6,
+                  name: 'ВС1 - И1 - Тип изделия 2',
+                  productNames: [{
+                      id: 7,
+                      name: 'ВС1 - И1 - ТИ2 Наименование 1',
+                      cost: 1234
+                    },
+                    {
+                      id: 8,
+                      name: 'ВС1 - И1 - ТИ2 Наименование 2',
+                      cost: 1234
+                    },
+                  ]
+                },
+              ]
+            },
+            {
+              id: 9,
+              name: 'ВС1 - Изделие 2',
+              productTypes: [{
+                  id: 10,
+                  name: 'ВС1 - И2 - Тип изделия 1',
+                  productNames: [{
+                      id: 11,
+                      name: 'ВС1 - И2 - ТИ1 Наименование 1',
+                      cost: 1234
+                    },
+                    {
+                      id: 12,
+                      name: 'ВС1 - И2 - ТИ1 Наименование 2',
+                      cost: 1234
+                    },
+                  ]
+                },
+                {
+                  id: 13,
+                  name: 'ВС1 - И2 - Тип изделия 2',
+                  productNames: [{
+                      id: 14,
+                      name: 'ВС1 - И2 - ТИ2 Наименование 1',
+                      cost: 1234
+                    },
+                    {
+                      id: 15,
+                      name: 'ВС1 - И2 - ТИ2 Наименование 2',
+                      cost: 1234
+                    },
+                  ]
+                },
+              ]
+            },
+          ]
+        },
+        {
+          id: 16,
+          name: 'Вид строительства 2'
+        }
+      ]
+    }),
+    computed: {
+      currentType() {
+        return this.types?.find(({
+          id
+        }) => id == this.currentTypeId)
+      },
+      currentProduct() {
+        return this.currentType?.products?.find(({
+          id
+        }) => id == this.currentProductId)
+      },
+      currentProductType() {
+        return this.currentProduct?.productTypes?.find(({
+          id
+        }) => id == this.currentProductTypeId)
+      },
+      currentProductName() {
+        return this.currentProductType?.productNames?.find(({
+          id
+        }) => id == this.currentProductNameId)
+      },
+    }
+  })
+
+  calcApp.mount(document.getElementById('calc-app'))
+</script>
 
 <!-- ценовое предложение -->
 <section class="cost">
