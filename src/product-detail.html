@@ -147,6 +147,20 @@
   })
 </script>
 
+<section class="py-16 overflow-hidden bg-l3">
+  <div class="title mb-6 sm:mb-10">Варианты наименования изделия</div>
+  <div class="flex flex-wrap gap-x-1.5 gap-y-2.5">
+    <% for(let i = 0; i < 100; i++) { %>
+    <div class="border rounded-full border-default/20 px-2 pb-1.5 pt-1 leading-none">
+      <span class="opacity-60 text-sm/none">ДЛ2612</span>
+    </div>
+    <div class="border rounded-full border-default/20 px-2 pb-1.5 pt-1 leading-none ">
+      <span class="opacity-60 text-sm/none">ДЛ26*12</span>
+    </div>
+    <% } %>
+  </div>
+</section>
+
 <%= require('./html-includes/location.html')() %>
 <%= require('./html-includes/consultation.html')() %>
 <%= require('./html-includes/footer.html')() %>
